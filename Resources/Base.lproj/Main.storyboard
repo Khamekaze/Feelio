@@ -1,10 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="uUy-fR-efY">
+            <objects>
+                <viewController id="s5z-K7-e7x" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mi4-uw-bYu"/>
+                        <viewControllerLayoutGuide type="bottom" id="9dW-VD-Stw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dXn-GE-6Bu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-Rr-ewj">
+                                <rect key="frame" x="0.0" y="579" width="375" height="87"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4S-4a-KBI">
+                                <rect key="frame" x="0.0" y="492" width="375" height="86"/>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.59607843137254901" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-aI-RxX">
+                                <rect key="frame" x="0.0" y="404" width="375" height="87"/>
+                                <color key="backgroundColor" red="0.50588235294117645" green="0.0" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT9-uo-ClA">
+                                <rect key="frame" x="0.0" y="316" width="375" height="87"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.59607843137254901" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msV-Qz-xqM">
+                                <rect key="frame" x="0.0" y="228" width="375" height="87"/>
+                                <color key="backgroundColor" cyan="0.010437190532684326" magenta="0.46530281869988693" yellow="0.93927323190789469" black="0.029480457305908203" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feeliologgamedslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vu2-Mt-urN">
+                                <rect key="frame" x="49" y="35" width="276" height="151"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="1Ox-hG-Z5z"/>
+                            <constraint firstItem="9dW-VD-Stw" firstAttribute="top" secondItem="KhX-Rr-ewj" secondAttribute="bottom" constant="1" id="32i-eV-Lk7"/>
+                            <constraint firstItem="gT9-uo-ClA" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="3Ze-Xf-frK"/>
+                            <constraint firstItem="n4S-4a-KBI" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="8th-Cm-awF"/>
+                            <constraint firstAttribute="trailing" secondItem="n4S-4a-KBI" secondAttribute="trailing" id="CaM-YL-5Vd"/>
+                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="top" secondItem="n4S-4a-KBI" secondAttribute="bottom" constant="1" id="FXO-O1-wA0"/>
+                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="FbP-R7-6A8"/>
+                            <constraint firstAttribute="trailing" secondItem="msV-Qz-xqM" secondAttribute="trailing" id="Fls-ru-Em8"/>
+                            <constraint firstItem="gT9-uo-ClA" firstAttribute="top" secondItem="msV-Qz-xqM" secondAttribute="bottom" constant="1" id="GV3-OW-Vc1"/>
+                            <constraint firstItem="gT9-uo-ClA" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="MLZ-cm-w7f"/>
+                            <constraint firstItem="msV-Qz-xqM" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="UYZ-Hk-8ek"/>
+                            <constraint firstItem="n4S-4a-KBI" firstAttribute="top" secondItem="3F7-aI-RxX" secondAttribute="bottom" constant="1" id="WNw-G4-Wd8"/>
+                            <constraint firstItem="3F7-aI-RxX" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="eml-9z-DNX"/>
+                            <constraint firstAttribute="trailing" secondItem="KhX-Rr-ewj" secondAttribute="trailing" id="fEd-3A-8tj"/>
+                            <constraint firstItem="3F7-aI-RxX" firstAttribute="top" secondItem="gT9-uo-ClA" secondAttribute="bottom" constant="1" id="h3b-Kt-SOQ"/>
+                            <constraint firstAttribute="trailing" secondItem="3F7-aI-RxX" secondAttribute="trailing" id="hdB-nq-QJ2"/>
+                            <constraint firstItem="n4S-4a-KBI" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="llf-s8-zwc"/>
+                            <constraint firstAttribute="trailing" secondItem="gT9-uo-ClA" secondAttribute="trailing" id="oQO-4T-mPk"/>
+                            <constraint firstItem="3F7-aI-RxX" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="oxa-d4-r9P"/>
+                            <constraint firstItem="msV-Qz-xqM" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="p8z-qt-39t"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRO-ie-e4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300.5" y="308.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -49,4 +116,7 @@
             <point key="canvasLocation" x="244.5" y="308.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feeliologgamedslogan.png" width="3050" height="1596"/>
+    </resources>
 </document>
