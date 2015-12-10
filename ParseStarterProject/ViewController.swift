@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (PFUser.currentUser() == nil){
+        if (PFUser.currentUser()?.username == nil){
         PFAnonymousUtils.logInWithBlock {
             (user: PFUser?, error: NSError?) -> Void in
             if error != nil || user == nil {
