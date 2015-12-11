@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		6309EE291C1723050060FBDE /* feeliologgamedslogan.png in Resources */ = {isa = PBXBuildFile; fileRef = 6309EE281C1723050060FBDE /* feeliologgamedslogan.png */; };
 		6309EE2B1C1723D20060FBDE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309EE2A1C1723D20060FBDE /* FirstViewController.swift */; };
+		63BC1ADD1C19BD8300A3F8B4 /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BC1AD91C19BD8300A3F8B4 /* backbutton.png */; };
+		63BC1ADE1C19BD8300A3F8B4 /* likebutton_liked.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BC1ADA1C19BD8300A3F8B4 /* likebutton_liked.png */; };
+		63BC1ADF1C19BD8300A3F8B4 /* likebutton_notliked.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BC1ADB1C19BD8300A3F8B4 /* likebutton_notliked.png */; };
+		63BC1AE01C19BD8300A3F8B4 /* sharebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BC1ADC1C19BD8300A3F8B4 /* sharebutton.png */; };
+		63BD04111C1AF830001C9970 /* feeliologga utan slogan.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BD04101C1AF830001C9970 /* feeliologga utan slogan.png */; };
+		63BD041A1C1B0719001C9970 /* shakeimage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BD04181C1B0719001C9970 /* shakeimage1.png */; };
+		63BD041B1C1B0719001C9970 /* shakeimage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63BD04191C1B0719001C9970 /* shakeimage2.png */; };
 		744099481C1716A700217E3D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744099451C1716A700217E3D /* SwiftyJSON.swift */; };
 		744099491C1716A700217E3D /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 744099471C1716A700217E3D /* UIImage+animatedGIF.m */; };
 		7440994C1C17170500217E3D /* Giphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7440994B1C17170500217E3D /* Giphy.swift */; };
@@ -27,6 +34,13 @@
 /* Begin PBXFileReference section */
 		6309EE281C1723050060FBDE /* feeliologgamedslogan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeliologgamedslogan.png; sourceTree = "<group>"; };
 		6309EE2A1C1723D20060FBDE /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		63BC1AD91C19BD8300A3F8B4 /* backbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbutton.png; sourceTree = "<group>"; };
+		63BC1ADA1C19BD8300A3F8B4 /* likebutton_liked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likebutton_liked.png; sourceTree = "<group>"; };
+		63BC1ADB1C19BD8300A3F8B4 /* likebutton_notliked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = likebutton_notliked.png; sourceTree = "<group>"; };
+		63BC1ADC1C19BD8300A3F8B4 /* sharebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharebutton.png; sourceTree = "<group>"; };
+		63BD04101C1AF830001C9970 /* feeliologga utan slogan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feeliologga utan slogan.png"; sourceTree = "<group>"; };
+		63BD04181C1B0719001C9970 /* shakeimage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeimage1.png; sourceTree = "<group>"; };
+		63BD04191C1B0719001C9970 /* shakeimage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shakeimage2.png; sourceTree = "<group>"; };
 		744099431C1716A700217E3D /* ParseStarterProject-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseStarterProject-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		744099441C1716A700217E3D /* SwiftGIFImage-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftGIFImage-Bridging-Header.h"; sourceTree = "<group>"; };
 		744099451C1716A700217E3D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -68,6 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63BC1AD81C19BD7800A3F8B4 /* Bilder */ = {
+			isa = PBXGroup;
+			children = (
+				63BC1AD91C19BD8300A3F8B4 /* backbutton.png */,
+				63BD04101C1AF830001C9970 /* feeliologga utan slogan.png */,
+				63BC1ADA1C19BD8300A3F8B4 /* likebutton_liked.png */,
+				63BC1ADB1C19BD8300A3F8B4 /* likebutton_notliked.png */,
+				63BC1ADC1C19BD8300A3F8B4 /* sharebutton.png */,
+				63BD04181C1B0719001C9970 /* shakeimage1.png */,
+				63BD04191C1B0719001C9970 /* shakeimage2.png */,
+			);
+			name = Bilder;
+			sourceTree = "<group>";
+		};
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +126,7 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				63BC1AD81C19BD7800A3F8B4 /* Bilder */,
 				7440994A1C17170500217E3D /* Giphy.h */,
 				7440994B1C17170500217E3D /* Giphy.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
@@ -197,8 +226,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BD041A1C1B0719001C9970 /* shakeimage1.png in Resources */,
+				63BD04111C1AF830001C9970 /* feeliologga utan slogan.png in Resources */,
+				63BC1ADF1C19BD8300A3F8B4 /* likebutton_notliked.png in Resources */,
+				63BD041B1C1B0719001C9970 /* shakeimage2.png in Resources */,
 				6309EE291C1723050060FBDE /* feeliologgamedslogan.png in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
+				63BC1ADE1C19BD8300A3F8B4 /* likebutton_liked.png in Resources */,
+				63BC1ADD1C19BD8300A3F8B4 /* backbutton.png in Resources */,
+				63BC1AE01C19BD8300A3F8B4 /* sharebutton.png in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -354,6 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
