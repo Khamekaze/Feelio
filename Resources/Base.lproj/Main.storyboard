@@ -19,51 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-Rr-ewj">
-                                <rect key="frame" x="0.0" y="579" width="375" height="87"/>
+                                <rect key="frame" x="188" y="467" width="187" height="200"/>
                                 <color key="backgroundColor" red="0.85490196078431369" green="0.0" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4S-4a-KBI">
-                                <rect key="frame" x="0.0" y="492" width="375" height="86"/>
-                                <color key="backgroundColor" red="0.15686274509803921" green="0.59607843137254901" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-aI-RxX">
-                                <rect key="frame" x="0.0" y="404" width="375" height="87"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-aI-RxX">
+                                <rect key="frame" x="190" y="320" width="179" height="164"/>
                                 <color key="backgroundColor" red="0.50588235294117645" green="0.0" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT9-uo-ClA">
-                                <rect key="frame" x="0.0" y="316" width="375" height="87"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gT9-uo-ClA">
+                                <rect key="frame" x="0.0" y="316" width="141" height="157"/>
                                 <color key="backgroundColor" red="0.15294117647058825" green="0.59607843137254901" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msV-Qz-xqM">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msV-Qz-xqM">
                                 <rect key="frame" x="0.0" y="228" width="375" height="87"/>
                                 <color key="backgroundColor" cyan="0.010437190532684326" magenta="0.46530281869988693" yellow="0.93927323190789469" black="0.029480457305908203" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feeliologgamedslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vu2-Mt-urN">
                                 <rect key="frame" x="49" y="35" width="276" height="151"/>
                             </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4S-4a-KBI">
+                                <rect key="frame" x="0.0" y="496" width="141" height="130"/>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.59607843137254901" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="1Ox-hG-Z5z"/>
-                            <constraint firstItem="9dW-VD-Stw" firstAttribute="top" secondItem="KhX-Rr-ewj" secondAttribute="bottom" constant="1" id="32i-eV-Lk7"/>
-                            <constraint firstItem="gT9-uo-ClA" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="3Ze-Xf-frK"/>
-                            <constraint firstItem="n4S-4a-KBI" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="8th-Cm-awF"/>
-                            <constraint firstAttribute="trailing" secondItem="n4S-4a-KBI" secondAttribute="trailing" id="CaM-YL-5Vd"/>
-                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="top" secondItem="n4S-4a-KBI" secondAttribute="bottom" constant="1" id="FXO-O1-wA0"/>
-                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="FbP-R7-6A8"/>
-                            <constraint firstAttribute="trailing" secondItem="msV-Qz-xqM" secondAttribute="trailing" id="Fls-ru-Em8"/>
-                            <constraint firstItem="gT9-uo-ClA" firstAttribute="top" secondItem="msV-Qz-xqM" secondAttribute="bottom" constant="1" id="GV3-OW-Vc1"/>
-                            <constraint firstItem="gT9-uo-ClA" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="MLZ-cm-w7f"/>
-                            <constraint firstItem="msV-Qz-xqM" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="UYZ-Hk-8ek"/>
-                            <constraint firstItem="n4S-4a-KBI" firstAttribute="top" secondItem="3F7-aI-RxX" secondAttribute="bottom" constant="1" id="WNw-G4-Wd8"/>
-                            <constraint firstItem="3F7-aI-RxX" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="eml-9z-DNX"/>
-                            <constraint firstAttribute="trailing" secondItem="KhX-Rr-ewj" secondAttribute="trailing" id="fEd-3A-8tj"/>
-                            <constraint firstItem="3F7-aI-RxX" firstAttribute="top" secondItem="gT9-uo-ClA" secondAttribute="bottom" constant="1" id="h3b-Kt-SOQ"/>
-                            <constraint firstAttribute="trailing" secondItem="3F7-aI-RxX" secondAttribute="trailing" id="hdB-nq-QJ2"/>
-                            <constraint firstItem="n4S-4a-KBI" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="llf-s8-zwc"/>
-                            <constraint firstAttribute="trailing" secondItem="gT9-uo-ClA" secondAttribute="trailing" id="oQO-4T-mPk"/>
-                            <constraint firstItem="3F7-aI-RxX" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.13" id="oxa-d4-r9P"/>
-                            <constraint firstItem="msV-Qz-xqM" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="p8z-qt-39t"/>
+                            <constraint firstItem="n4S-4a-KBI" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="2eI-yc-ANG"/>
+                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.3" id="3AV-m6-JV0"/>
+                            <constraint firstAttribute="trailing" secondItem="KhX-Rr-ewj" secondAttribute="trailing" id="E2Q-KT-eg2"/>
+                            <constraint firstItem="9dW-VD-Stw" firstAttribute="top" secondItem="n4S-4a-KBI" secondAttribute="bottom" id="Y2Q-XR-Rwp"/>
+                            <constraint firstItem="KhX-Rr-ewj" firstAttribute="width" secondItem="dXn-GE-6Bu" secondAttribute="width" multiplier="0.5" id="Yw3-oY-iDY"/>
+                            <constraint firstItem="9dW-VD-Stw" firstAttribute="top" secondItem="KhX-Rr-ewj" secondAttribute="bottom" id="bUy-ec-Vrj"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -97,7 +83,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
                                         <rect key="frame" x="0.0" y="101" width="375" height="466"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
                                         <rect key="frame" x="5" y="5" width="57" height="30"/>
                                         <state key="normal" title="Random"/>
                                         <connections>
@@ -179,7 +165,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="feeliologgamedslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="feeliologgamedslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
                                         <rect key="frame" x="0.0" y="35" width="375" height="64"/>
                                     </imageView>
                                 </subviews>
