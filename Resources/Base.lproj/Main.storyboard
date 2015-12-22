@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s5z-K7-e7x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s5z-K7-e7x">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -136,23 +136,13 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
                                         <rect key="frame" x="0.0" y="101" width="375" height="466"/>
                                     </imageView>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
-=======
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
->>>>>>> parent of b0c897c... Merge pull request #7 from Khamekaze/Davidsbranch3
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
                                         <rect key="frame" x="5" y="5" width="57" height="30"/>
                                         <state key="normal" title="Random"/>
                                         <connections>
                                             <action selector="randomGif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrN-Sg-fCT"/>
                                         </connections>
                                     </button>
->>>>>>> master
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26h-Dh-ey8">
                                         <rect key="frame" x="153" y="546" width="70" height="21"/>
                                         <constraints>
@@ -228,19 +218,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologga utan slogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
-=======
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
->>>>>>> master
-=======
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
->>>>>>> master
-=======
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="feeliologga utan slogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
->>>>>>> parent of b0c897c... Merge pull request #7 from Khamekaze/Davidsbranch3
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
                                         <rect key="frame" x="0.0" y="35" width="375" height="64"/>
                                     </imageView>
                                 </subviews>
@@ -304,6 +282,7 @@
     <resources>
         <image name="backbutton.png" width="887" height="887"/>
         <image name="feeliologga utan slogan.png" width="1531" height="517"/>
+        <image name="feeliologgavitUTANslogan.png" width="1531" height="517"/>
         <image name="likebutton_liked.png" width="1098" height="1004"/>
         <image name="likebutton_notliked.png" width="1088" height="1008"/>
         <image name="shakeimage1.png" width="763" height="1358"/>
