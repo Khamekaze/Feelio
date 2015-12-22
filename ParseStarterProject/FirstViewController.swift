@@ -61,10 +61,10 @@ class FirstViewController: UIViewController {
             
         }
         
-   /*
+        
         timer1 = NSTimer.scheduledTimerWithTimeInterval(7, target: self, selector: "startShake", userInfo: nil, repeats: false)
         timer2 = NSTimer.scheduledTimerWithTimeInterval(7.4, target: self, selector: "startShake2", userInfo: nil, repeats: false)
-        */
+        
         
         // Do any additional setup after loading the view.
     }
@@ -89,11 +89,11 @@ class FirstViewController: UIViewController {
     
     func startShake(){
         print("SHAKE1")
-        timer3 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "shakeAnimation1", userInfo: nil, repeats: true)
+        timer3 = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "shakeAnimation1", userInfo: nil, repeats: true)
     }
     func startShake2(){
         print("SHAKE2")
-        timer4 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "shakeAnimation2", userInfo: nil, repeats: true)
+        timer4 = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "shakeAnimation2", userInfo: nil, repeats: true)
     }
     func shakeAnimation1(){
         print("shake1")
