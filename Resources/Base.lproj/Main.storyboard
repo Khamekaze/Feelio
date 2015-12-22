@@ -176,10 +176,7 @@
                                         <rect key="frame" x="0.0" y="101" width="375" height="466"/>
                                     </imageView>
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> master
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
                                         <rect key="frame" x="5" y="5" width="57" height="30"/>
                                         <state key="normal" title="Random"/>
@@ -264,11 +261,7 @@
                                         </variation>
                                     </view>
 <<<<<<< HEAD
-<<<<<<< HEAD
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologga utan slogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
-=======
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
->>>>>>> master
 =======
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
 >>>>>>> master
