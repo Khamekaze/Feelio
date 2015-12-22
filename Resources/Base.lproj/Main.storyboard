@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s5z-K7-e7x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s5z-K7-e7x">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -105,7 +105,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="n4S-4a-KBI" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="2eI-yc-ANG"/>
                             <constraint firstItem="KhX-Rr-ewj" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.22" id="3AV-m6-JV0"/>
@@ -137,11 +136,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="button1" destination="msV-Qz-xqM" id="4Mn-Vl-FM0"/>
-                        <outlet property="button2" destination="gT9-uo-ClA" id="h8C-c2-eMw"/>
-                        <outlet property="button3" destination="3F7-aI-RxX" id="n6N-gj-yBQ"/>
-                        <outlet property="button4" destination="n4S-4a-KBI" id="EOM-QG-5HQ"/>
-                        <outlet property="button5" destination="KhX-Rr-ewj" id="mM7-zF-70b"/>
                         <outlet property="gifImageViewFirstPage" destination="E63-lV-sXg" id="DJm-74-CLw"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="secondViewController" id="sag-hs-N55"/>
                     </connections>
@@ -175,8 +169,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
                                         <rect key="frame" x="0.0" y="101" width="375" height="466"/>
                                     </imageView>
-<<<<<<< HEAD
-=======
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
                                         <rect key="frame" x="5" y="5" width="57" height="30"/>
                                         <state key="normal" title="Random"/>
@@ -184,7 +176,6 @@
                                             <action selector="randomGif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrN-Sg-fCT"/>
                                         </connections>
                                     </button>
->>>>>>> master
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26h-Dh-ey8">
                                         <rect key="frame" x="153" y="546" width="70" height="21"/>
                                         <constraints>
@@ -260,16 +251,13 @@
                                             </mask>
                                         </variation>
                                     </view>
-<<<<<<< HEAD
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologga utan slogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
-=======
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
->>>>>>> master
                                         <rect key="frame" x="0.0" y="35" width="375" height="64"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81568627450980391" green="0.40784313725490196" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Heg-GV-nz4" firstAttribute="top" secondItem="xMT-qW-sB2" secondAttribute="bottom" id="2Tu-gL-ZIc"/>
                                     <constraint firstAttribute="trailing" secondItem="rMD-v3-ccv" secondAttribute="trailing" constant="5" id="2zr-l3-o5O"/>
                                     <constraint firstItem="26h-Dh-ey8" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="centerY" id="5K0-KI-rKt"/>
                                     <constraint firstAttribute="trailing" secondItem="qHI-BK-WbO" secondAttribute="trailing" id="9ly-FE-1la"/>
@@ -278,7 +266,9 @@
                                     <constraint firstItem="qHI-BK-WbO" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="Jco-ib-aiV"/>
                                     <constraint firstAttribute="trailing" secondItem="RNN-wr-lQR" secondAttribute="trailing" id="QBL-9R-anX"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="S7M-Cx-dVN"/>
+                                    <constraint firstItem="xMT-qW-sB2" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" constant="5" id="TwB-9x-AkY"/>
                                     <constraint firstItem="Heg-GV-nz4" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="drA-eh-0RL"/>
+                                    <constraint firstItem="xMT-qW-sB2" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="5" id="eff-Ml-7Rk"/>
                                     <constraint firstItem="rMD-v3-ccv" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="5" id="gVn-cd-ruE"/>
                                     <constraint firstAttribute="trailing" secondItem="Heg-GV-nz4" secondAttribute="trailing" id="he1-vR-9jZ"/>
                                     <constraint firstItem="26h-Dh-ey8" firstAttribute="centerX" secondItem="qHI-BK-WbO" secondAttribute="centerX" id="ndy-3U-DVC"/>
@@ -293,7 +283,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Gvt-tf-aTe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5L6-Ju-JdE"/>
                             <constraint firstAttribute="trailing" secondItem="Gvt-tf-aTe" secondAttribute="trailing" id="HYj-yB-h5O"/>
@@ -302,12 +291,10 @@
                             <constraint firstItem="RNN-wr-lQR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDG-16-nl1"/>
                             <constraint firstItem="RNN-wr-lQR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="ult-ly-fU3"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="ZFp-Fn-mOZ" appends="YES" id="bZK-a0-UBx"/>
-                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="button" destination="xMT-qW-sB2" id="Yy9-mZ-Bnh"/>
                         <outlet property="dislikeButton" destination="KkQ-9R-u3b" id="RA6-HB-uoI"/>
                         <outlet property="gifImage" destination="RNN-wr-lQR" id="wFC-eU-wUx"/>
                         <outlet property="likeButton" destination="LnJ-h2-TV9" id="o71-g2-8a2"/>
@@ -315,12 +302,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="ZFp-Fn-mOZ">
-                    <connections>
-                        <action selector="randomGifSwipe:" destination="BYZ-38-t0r" id="RmQ-H9-l2a"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="sOL-59-FiH"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="264.5" y="338.5"/>
         </scene>
