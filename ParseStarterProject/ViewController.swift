@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var gifObjectId = String()
     var backgroundColor = String()
     var gifFound = Bool()
+    var searchTag = [String]()
     
     
     @IBOutlet weak var dislikeButton: UIButton!
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.searchTag)
         if (PFUser.currentUser()?.username == nil){
         PFAnonymousUtils.logInWithBlock {
             (user: PFUser?, error: NSError?) -> Void in
@@ -48,9 +50,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func randomGif(sender: AnyObject) {
-        g.random("happy", rating: nil) { gif, err in
+
+    @IBAction func randomGifSwipe(sender: AnyObject) {
+        var random = arc4random_uniform(UInt32(searchTag.count))
+        g.random(searchTag[Int(random)], rating: nil) { gif, err in
             let json = JSON((gif?.json)!)
             let urlString = json["image_original_url"].string
             let url: NSURL = NSURL(string: urlString!)!
@@ -59,16 +62,14 @@ class ViewController: UIViewController {
                 self.gifImage.startAnimating()
                 self.gifId = (gif?.id)!
                 print("GifID: \(self.gifId)")
-                 self.getGifInfo()
+                self.getGifInfo()
             })
         }
-       
+        
         
     }
     
-    
-    
-    
+
     
     @IBAction func button2(sender: UIButton) {
         getGifInfo()
