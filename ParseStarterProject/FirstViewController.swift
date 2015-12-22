@@ -15,15 +15,41 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var shakeImage2: UIImageView!
 
     @IBOutlet weak var shakeImage1: UIImageView!
+
     
     var timer1 = NSTimer()
     var timer2 = NSTimer()
     var timer3 = NSTimer()
     var timer4 = NSTimer()
     
+    var searchTag = [String]()
+  
+    
+    @IBOutlet weak var button1: UIView!
+    @IBOutlet weak var button2: UIView!
+    @IBOutlet weak var button3: UIView!
+    @IBOutlet weak var button4: UIView!
+    @IBOutlet weak var button5: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        let gesture1 = UITapGestureRecognizer(target: self, action: "button1Tap")
+        let gesture2 = UITapGestureRecognizer(target: self, action: "button2Tap")
+        let gesture3 = UITapGestureRecognizer(target: self, action: "button3Tap")
+        let gesture4 = UITapGestureRecognizer(target: self, action: "button4Tap")
+        let gesture5 = UITapGestureRecognizer(target: self, action: "button5Tap")
+        
+        self.button1.addGestureRecognizer(gesture1)
+        self.button2.addGestureRecognizer(gesture2)
+        self.button3.addGestureRecognizer(gesture3)
+        self.button4.addGestureRecognizer(gesture4)
+        self.button5.addGestureRecognizer(gesture5)
+
+        
+        
         gifImageViewFirstPage.animationImages = [UIImage]()
         
         for var index = 0; index < 60; index++ {
@@ -89,7 +115,58 @@ class FirstViewController: UIViewController {
         timer4.invalidate()
     }
     
-    
 
+
+    func button1Tap(){
+        print("button Special pressed")
+        searchTag.append("cats")
+        searchTag.append("panda")
+        performSegueWithIdentifier("secondViewController", sender: self)
+        stopTimers()
+    }
+    func button2Tap(){
+         print("button Happy pressed")
+        searchTag.append("happy")
+        searchTag.append("excited")
+        searchTag.append("glad")
+        searchTag.append("joy")
+        performSegueWithIdentifier("secondViewController", sender: self)
+        stopTimers()
+    }
+    func button3Tap(){
+         print("button Romantic pressed")
+        searchTag.append("romantic")
+        searchTag.append("love")
+        performSegueWithIdentifier("secondViewController", sender: self)
+        stopTimers()
+    }
+    func button4Tap(){
+         print("button Pumped pressed")
+        searchTag.append("pumped")
+        searchTag.append("thrilled")
+        searchTag.append("gains")
+        searchTag.append("fight")
+        performSegueWithIdentifier("secondViewController", sender: self)
+        stopTimers()
+    }
+    func button5Tap(){
+         print("button Rage pressed")
+        searchTag.append("rage")
+        searchTag.append("frustrated")
+        searchTag.append("stressed")
+        searchTag.append("angry")
+        performSegueWithIdentifier("secondViewController", sender: self)
+        stopTimers()
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var destinationVC = segue.destinationViewController as! ViewController
+        destinationVC.searchTag = self.searchTag
+        
+        
+    }
+    
 
 }
