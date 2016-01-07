@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s5z-K7-e7x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s5z-K7-e7x">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -21,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4S-4a-KBI">
                                 <rect key="frame" x="0.0" y="520" width="185" height="147"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="happybutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="gqM-se-hq0">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="happybutton1.png" translatesAutoresizingMaskIntoConstraints="NO" id="gqM-se-hq0">
                                         <rect key="frame" x="1" y="0.0" width="184" height="147"/>
                                     </imageView>
                                 </subviews>
@@ -36,7 +37,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-aI-RxX">
                                 <rect key="frame" x="191" y="368" width="184" height="147"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="affectionatedbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="W04-7i-1zR">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="affectionatedbutton1.png" translatesAutoresizingMaskIntoConstraints="NO" id="W04-7i-1zR">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="147"/>
                                     </imageView>
                                 </subviews>
@@ -51,7 +52,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT9-uo-ClA">
                                 <rect key="frame" x="0.0" y="368" width="184" height="147"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pressurizedbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="JZ1-hp-YZB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pumpedbutton1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JZ1-hp-YZB">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="147"/>
                                     </imageView>
                                 </subviews>
@@ -66,7 +67,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msV-Qz-xqM">
                                 <rect key="frame" x="0.0" y="230" width="375" height="133"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catsbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-wG-Gh7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valentinesbutton_stor.png" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-wG-Gh7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
                                     </imageView>
                                 </subviews>
@@ -81,7 +82,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-Rr-ewj">
                                 <rect key="frame" x="191" y="520" width="184" height="147"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pumpedbutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ZR-zT-Fh3">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pressurizedbutton1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7ZR-zT-Fh3">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="147"/>
                                     </imageView>
                                 </subviews>
@@ -97,9 +98,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feeliologgavitmedslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="aE2-kb-3fh">
-                                <rect key="frame" x="61" y="92" width="252" height="118"/>
+                                <rect key="frame" x="61" y="130" width="252" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="EOM-5E-xEl"/>
+                                    <constraint firstAttribute="height" constant="80" id="EOM-5E-xEl"/>
                                     <constraint firstAttribute="width" constant="252" id="txW-9p-Jmp"/>
                                 </constraints>
                             </imageView>
@@ -136,6 +137,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="button1" destination="msV-Qz-xqM" id="A6y-BU-uUV"/>
+                        <outlet property="button2" destination="gT9-uo-ClA" id="VKO-7C-gOT"/>
+                        <outlet property="button3" destination="3F7-aI-RxX" id="Il0-L8-JQN"/>
+                        <outlet property="button4" destination="n4S-4a-KBI" id="vqg-rL-3Ml"/>
+                        <outlet property="button5" destination="KhX-Rr-ewj" id="l2R-XW-hlm"/>
                         <outlet property="gifImageViewFirstPage" destination="E63-lV-sXg" id="DJm-74-CLw"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="secondViewController" id="sag-hs-N55"/>
                     </connections>
@@ -169,13 +175,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
                                         <rect key="frame" x="0.0" y="101" width="375" height="466"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-qW-sB2">
-                                        <rect key="frame" x="5" y="5" width="57" height="30"/>
-                                        <state key="normal" title="Random"/>
-                                        <connections>
-                                            <action selector="randomGif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrN-Sg-fCT"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26h-Dh-ey8">
                                         <rect key="frame" x="153" y="546" width="70" height="21"/>
                                         <constraints>
@@ -219,11 +218,24 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sharebutton.png" translatesAutoresizingMaskIntoConstraints="NO" id="25B-PH-2ne">
                                                 <rect key="frame" x="292" y="15" width="75" height="70"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-oJ-pRs">
+                                                <rect key="frame" x="8" y="15" width="75" height="74"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="74" id="0E7-ic-7FR"/>
+                                                    <constraint firstAttribute="width" constant="75" id="QIX-ry-7uw"/>
+                                                </constraints>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <segue destination="s5z-K7-e7x" kind="show" id="q5J-9C-mGP"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="bEh-oJ-pRs" firstAttribute="leading" secondItem="qHI-BK-WbO" secondAttribute="leadingMargin" id="0yN-lx-6Gt"/>
                                             <constraint firstItem="25B-PH-2ne" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="centerY" id="4fH-Ku-Xdp"/>
                                             <constraint firstItem="KkQ-9R-u3b" firstAttribute="centerX" secondItem="qHI-BK-WbO" secondAttribute="centerX" id="5UR-qV-pie"/>
                                             <constraint firstAttribute="trailing" secondItem="25B-PH-2ne" secondAttribute="trailing" constant="8" id="6qs-zE-4U9"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="bEh-oJ-pRs" secondAttribute="bottom" constant="3" id="9Zg-hL-9dh"/>
                                             <constraint firstItem="KkQ-9R-u3b" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="centerY" id="9iM-br-W32"/>
                                             <constraint firstItem="LnJ-h2-TV9" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="centerY" id="Dfu-x8-gul"/>
                                             <constraint firstItem="wIH-oz-xyc" firstAttribute="leading" secondItem="qHI-BK-WbO" secondAttribute="leading" constant="7" id="Ec8-mN-OLQ"/>
@@ -251,13 +263,13 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
                                         <rect key="frame" x="0.0" y="35" width="375" height="64"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.81568627450980391" green="0.40784313725490196" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="Heg-GV-nz4" firstAttribute="top" secondItem="xMT-qW-sB2" secondAttribute="bottom" id="2Tu-gL-ZIc"/>
                                     <constraint firstAttribute="trailing" secondItem="rMD-v3-ccv" secondAttribute="trailing" constant="5" id="2zr-l3-o5O"/>
                                     <constraint firstItem="26h-Dh-ey8" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="centerY" id="5K0-KI-rKt"/>
                                     <constraint firstAttribute="trailing" secondItem="qHI-BK-WbO" secondAttribute="trailing" id="9ly-FE-1la"/>
@@ -266,9 +278,7 @@
                                     <constraint firstItem="qHI-BK-WbO" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="Jco-ib-aiV"/>
                                     <constraint firstAttribute="trailing" secondItem="RNN-wr-lQR" secondAttribute="trailing" id="QBL-9R-anX"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="S7M-Cx-dVN"/>
-                                    <constraint firstItem="xMT-qW-sB2" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" constant="5" id="TwB-9x-AkY"/>
                                     <constraint firstItem="Heg-GV-nz4" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="drA-eh-0RL"/>
-                                    <constraint firstItem="xMT-qW-sB2" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="5" id="eff-Ml-7Rk"/>
                                     <constraint firstItem="rMD-v3-ccv" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="5" id="gVn-cd-ruE"/>
                                     <constraint firstAttribute="trailing" secondItem="Heg-GV-nz4" secondAttribute="trailing" id="he1-vR-9jZ"/>
                                     <constraint firstItem="26h-Dh-ey8" firstAttribute="centerX" secondItem="qHI-BK-WbO" secondAttribute="centerX" id="ndy-3U-DVC"/>
@@ -280,6 +290,9 @@
                                         <exclude reference="5K0-KI-rKt"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vG7-DG-c27" appends="YES" id="OWi-6W-8DD"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -294,7 +307,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="button" destination="xMT-qW-sB2" id="Yy9-mZ-Bnh"/>
                         <outlet property="dislikeButton" destination="KkQ-9R-u3b" id="RA6-HB-uoI"/>
                         <outlet property="gifImage" destination="RNN-wr-lQR" id="wFC-eU-wUx"/>
                         <outlet property="likeButton" destination="LnJ-h2-TV9" id="o71-g2-8a2"/>
@@ -302,21 +314,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="vG7-DG-c27">
+                    <connections>
+                        <action selector="randomGifSwipe:" destination="BYZ-38-t0r" id="XUg-Ej-K3h"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="264.5" y="338.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="affectionatedbutton.png" width="771" height="617"/>
+        <image name="affectionatedbutton1.png" width="771" height="617"/>
         <image name="backbutton.png" width="887" height="887"/>
-        <image name="catsbutton.png" width="1567" height="558"/>
         <image name="feeliologgavitUTANslogan.png" width="1045" height="381"/>
         <image name="feeliologgavitmedslogan.png" width="1045" height="489"/>
-        <image name="happybutton.png" width="315" height="461"/>
+        <image name="happybutton1.png" width="771" height="617"/>
         <image name="likebutton_liked.png" width="1098" height="1004"/>
         <image name="likebutton_notliked.png" width="1088" height="1008"/>
-        <image name="pressurizedbutton.png" width="771" height="617"/>
-        <image name="pumpedbutton.png" width="771" height="617"/>
+        <image name="pressurizedbutton1.png" width="771" height="617"/>
+        <image name="pumpedbutton1.png" width="771" height="617"/>
         <image name="sharebutton.png" width="727" height="927"/>
+        <image name="valentinesbutton_stor.png" width="1567" height="558"/>
     </resources>
 </document>

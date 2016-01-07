@@ -42,6 +42,7 @@ class FirstViewController: UIViewController {
         let gesture4 = UITapGestureRecognizer(target: self, action: "button4Tap")
         let gesture5 = UITapGestureRecognizer(target: self, action: "button5Tap")
         
+    
         self.button1.addGestureRecognizer(gesture1)
         self.button2.addGestureRecognizer(gesture2)
         self.button3.addGestureRecognizer(gesture3)
@@ -61,11 +62,11 @@ class FirstViewController: UIViewController {
             
         }
         
-        
+        /*
         timer1 = NSTimer.scheduledTimerWithTimeInterval(7, target: self, selector: "startShake", userInfo: nil, repeats: false)
         timer2 = NSTimer.scheduledTimerWithTimeInterval(7.4, target: self, selector: "startShake2", userInfo: nil, repeats: false)
         
-        
+        */
         // Do any additional setup after loading the view.
     }
 
@@ -83,10 +84,12 @@ class FirstViewController: UIViewController {
         if motion == .MotionShake {
             print("SHAKKKEEESHAKEEE")
             performSegueWithIdentifier("secondViewController", sender: self)
-            stopTimers()        }
+            //stopTimers()
+        }
         
     }
     
+    /*
     func startShake(){
         print("SHAKE1")
         timer3 = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "shakeAnimation1", userInfo: nil, repeats: true)
@@ -115,14 +118,14 @@ class FirstViewController: UIViewController {
         timer4.invalidate()
     }
     
-
+    */
 
     func button1Tap(){
         print("button Special pressed")
         searchTag.append("cats")
         searchTag.append("panda")
         performSegueWithIdentifier("secondViewController", sender: self)
-        stopTimers()
+        //stopTimers()
     }
     func button2Tap(){
          print("button Happy pressed")
@@ -131,14 +134,14 @@ class FirstViewController: UIViewController {
         searchTag.append("glad")
         searchTag.append("joy")
         performSegueWithIdentifier("secondViewController", sender: self)
-        stopTimers()
+        //stopTimers()
     }
     func button3Tap(){
          print("button Romantic pressed")
         searchTag.append("romantic")
         searchTag.append("love")
         performSegueWithIdentifier("secondViewController", sender: self)
-        stopTimers()
+        //stopTimers()
     }
     func button4Tap(){
          print("button Pumped pressed")
@@ -147,7 +150,7 @@ class FirstViewController: UIViewController {
         searchTag.append("gains")
         searchTag.append("fight")
         performSegueWithIdentifier("secondViewController", sender: self)
-        stopTimers()
+        //stopTimers()
     }
     func button5Tap(){
          print("button Rage pressed")
@@ -156,7 +159,7 @@ class FirstViewController: UIViewController {
         searchTag.append("stressed")
         searchTag.append("angry")
         performSegueWithIdentifier("secondViewController", sender: self)
-        stopTimers()
+        //stopTimers()
     }
     
     
