@@ -67,7 +67,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msV-Qz-xqM">
                                 <rect key="frame" x="0.0" y="230" width="375" height="133"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valentinesbutton_stor.png" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-wG-Gh7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catsbutton_stor.png" translatesAutoresizingMaskIntoConstraints="NO" id="h7H-wG-Gh7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
                                     </imageView>
                                 </subviews>
@@ -326,6 +326,7 @@
     <resources>
         <image name="affectionatedbutton1.png" width="771" height="617"/>
         <image name="backbutton.png" width="887" height="887"/>
+        <image name="catsbutton_stor.png" width="1567" height="558"/>
         <image name="feeliologgavitUTANslogan.png" width="1045" height="381"/>
         <image name="feeliologgavitmedslogan.png" width="1045" height="489"/>
         <image name="happybutton1.png" width="771" height="617"/>
@@ -334,6 +335,5 @@
         <image name="pressurizedbutton1.png" width="771" height="617"/>
         <image name="pumpedbutton1.png" width="771" height="617"/>
         <image name="sharebutton.png" width="727" height="927"/>
-        <image name="valentinesbutton_stor.png" width="1567" height="558"/>
     </resources>
 </document>
