@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var backgroundColor = String()
     var gifFound = Bool()
     var searchTag = [String]()
-    
+    var globalGifURL = String()
     
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         g.random(searchTag[Int(random)], rating: nil) { gif, err in
             let json = JSON((gif?.json)!)
             let urlString = json["image_original_url"].string
+            self.globalGifURL = urlString!
             let url: NSURL = NSURL(string: urlString!)!
             dispatch_async(dispatch_get_main_queue(), {
                 self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
@@ -65,15 +66,13 @@ class ViewController: UIViewController {
                 self.getGifInfo()
             })
         }
-        
-        
     }
     
 
     
     @IBAction func button2(sender: UIButton) {
         getGifInfo()
-}
+    }
     
     @IBAction func likeButton(sender: UIButton){
         var user = PFUser.currentUser()
@@ -115,7 +114,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     
@@ -159,10 +157,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-
-        
-        
     }
     
     
@@ -244,10 +238,21 @@ class ViewController: UIViewController {
                         }
                     }
                 }
-                
             }
         }
     }
-
-
+    
+    @IBAction func shareButton(sender: AnyObject) {
+        
+        let shareText = "Feelio"
+        
+        let shareWebsite = NSURL(string: globalGifURL)
+        let shareObject = [shareText, shareWebsite!]
+        let activityVC = UIActivityViewController(activityItems: shareObject, applicationActivities: nil)
+        
+        activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+        
+        self.presentViewController(activityVC, animated: true, completion: nil)
+        
+    }
 }
