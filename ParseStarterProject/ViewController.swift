@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var gifFound = Bool()
     var searchTag = [String]()
     var globalGifURL = String()
+    var bgColor = String()
     
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
@@ -44,6 +45,23 @@ class ViewController: UIViewController {
         }else{
             print("user alredy logged in with username \(PFUser.currentUser()?.username)")
         }
+        
+        print(bgColor)
+        
+        if(bgColor == "yellow") {
+            self.view.backgroundColor = UIColor(red: 219.0/255.0, green: 197.0/255.0, blue: 44.0/255.0, alpha: 1.0)
+        } else if(bgColor == "green") {
+            self.view.backgroundColor = UIColor(red: 40.0/255.0, green: 152.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+            
+        } else if(bgColor == "purple") {
+            self.view.backgroundColor = UIColor(red: 129.0/255.0, green: 0.0/255.0, blue: 110.0/255.0, alpha: 1.0)
+        } else if(bgColor == "blue") {
+            self.view.backgroundColor = UIColor(red: 39.0/255.0, green: 152.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+            
+        } else if(bgColor == "orange") {
+            self.view.backgroundColor = UIColor(red: 208.0/255.0, green: 104.0/255.0, blue: 33.0/255.0, alpha: 1.0)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

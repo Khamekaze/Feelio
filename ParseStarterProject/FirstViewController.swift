@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var gifImageViewFirstPage: UIImageView!
@@ -15,7 +16,11 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var shakeImage2: UIImageView!
 
     @IBOutlet weak var shakeImage1: UIImageView!
+    
+    var season = String()
+    var bgColor = String()
 
+    @IBOutlet weak var seasonImage: UIImageView!
     
     var timer1 = NSTimer()
     var timer2 = NSTimer()
@@ -61,6 +66,34 @@ class FirstViewController: UIViewController {
  
             
         }
+        
+        var query = PFQuery(className:"Season")
+        query.getObjectInBackgroundWithId("FM2qfTOgGM") {
+            (parseSeason: PFObject?, error: NSError?) -> Void in
+            if error == nil && parseSeason != nil {
+                
+                self.season = parseSeason!["season"] as! String
+                print(self.season)
+            } else {
+                print(error)
+            }
+        }
+        
+        if self.season == "cats" {
+            seasonImage.image = UIImage(named: "catsbutton1")
+        }
+        
+        /*
+        if self.season == "christmas" {
+            seasonImage.image = UIImage(named: "christmasbutton1")
+        }
+        if self.season == "valentines" {
+            seasonImage.image = UIImage(named: "valentinesbutton1")
+        }
+        if self.season == "easter" {
+            seasonImage.image = UIImage(named: "easterbutton1")
+        }
+        */
         
         /*
         timer1 = NSTimer.scheduledTimerWithTimeInterval(7, target: self, selector: "startShake", userInfo: nil, repeats: false)
@@ -122,17 +155,26 @@ class FirstViewController: UIViewController {
 
     func button1Tap(){
         print("button Special pressed")
-        searchTag.append("cats")
-        searchTag.append("panda")
+        if(season == "cats") {
+            searchTag.append("cats")
+            bgColor = "yellow"
+        } else if(season == "christmas") {
+            //
+        } else if(season == "easter") {
+            //
+        } else if(season == "valentines") {
+            //
+        }
         performSegueWithIdentifier("secondViewController", sender: self)
         //stopTimers()
     }
-    func button2Tap(){
+    func button4Tap(){
          print("button Happy pressed")
         searchTag.append("happy")
         searchTag.append("excited")
         searchTag.append("glad")
         searchTag.append("joy")
+        bgColor = "green"
         performSegueWithIdentifier("secondViewController", sender: self)
         //stopTimers()
     }
@@ -140,15 +182,17 @@ class FirstViewController: UIViewController {
          print("button Romantic pressed")
         searchTag.append("romantic")
         searchTag.append("love")
+        bgColor = "purple"
         performSegueWithIdentifier("secondViewController", sender: self)
         //stopTimers()
     }
-    func button4Tap(){
+    func button2Tap(){
          print("button Pumped pressed")
         searchTag.append("pumped")
         searchTag.append("thrilled")
         searchTag.append("gains")
         searchTag.append("fight")
+        bgColor = "blue"
         performSegueWithIdentifier("secondViewController", sender: self)
         //stopTimers()
     }
@@ -158,6 +202,7 @@ class FirstViewController: UIViewController {
         searchTag.append("frustrated")
         searchTag.append("stressed")
         searchTag.append("angry")
+        bgColor = "orange"
         performSegueWithIdentifier("secondViewController", sender: self)
         //stopTimers()
     }
@@ -167,6 +212,7 @@ class FirstViewController: UIViewController {
         
         var destinationVC = segue.destinationViewController as! ViewController
         destinationVC.searchTag = self.searchTag
+        destinationVC.bgColor = self.bgColor
         
         
     }
