@@ -13,6 +13,8 @@ import ImageIO
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var swipeImageView: UIImageView!
+    
     var gifId = String()
     var gifLikes = Int()
     var gifUsers = [String]()
@@ -32,6 +34,28 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        swipeImageView.animationImages = [UIImage]()
+        
+        for var index = 0; index < 41; index++ {
+            
+            if(index < 10) {
+                let frameName = String(format: "swipe00%d", index)
+                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
+            } else {
+                let frameName = String(format: "swipe0%d", index)
+                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
+            }
+            
+            swipeImageView.animationDuration = 2
+            swipeImageView.startAnimating()
+            
+            
+        }
+        
+        
+        
         print(self.searchTag)
         if (PFUser.currentUser()?.username == nil){
         PFAnonymousUtils.logInWithBlock {
@@ -62,6 +86,8 @@ class ViewController: UIViewController {
             self.view.backgroundColor = UIColor(red: 208.0/255.0, green: 104.0/255.0, blue: 33.0/255.0, alpha: 1.0)
         }
         
+        randomGif()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +96,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func randomGifSwipe(sender: AnyObject) {
+        var random = arc4random_uniform(UInt32(searchTag.count))
+        g.random(searchTag[Int(random)], rating: nil) { gif, err in
+            let json = JSON((gif?.json)!)
+            let urlString = json["image_original_url"].string
+            self.globalGifURL = urlString!
+            let url: NSURL = NSURL(string: urlString!)!
+            dispatch_async(dispatch_get_main_queue(), {
+                self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                self.gifImage.startAnimating()
+                self.gifId = (gif?.id)!
+                print("GifID: \(self.gifId)")
+                self.getGifInfo()
+            })
+        }
+    }
+    
+    func randomGif() {
         var random = arc4random_uniform(UInt32(searchTag.count))
         g.random(searchTag[Int(random)], rating: nil) { gif, err in
             let json = JSON((gif?.json)!)
@@ -262,14 +305,14 @@ class ViewController: UIViewController {
     
     @IBAction func shareButton(sender: AnyObject) {
         
-        let shareText = "Feelio"
+        //let shareText = "Feelio"
         
         let shareWebsite = NSURL(string: globalGifURL)
-        let shareObject = [shareText, shareWebsite!]
+        let shareObject = [shareWebsite!]
         let activityVC = UIActivityViewController(activityItems: shareObject, applicationActivities: nil)
         
         activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
-        
+        print(globalGifURL)
         self.presentViewController(activityVC, animated: true, completion: nil)
         
     }
