@@ -116,6 +116,18 @@ class FirstViewController: UIViewController {
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
             print("SHAKKKEEESHAKEEE")
+            let selector = arc4random_uniform(5)
+            if(selector == 0) {
+                button1Tap()
+            } else if(selector == 1) {
+                button2Tap()
+            } else if(selector == 2) {
+                button3Tap()
+            } else if(selector == 3) {
+                button4Tap()
+            } else if(selector == 4) {
+                button5Tap()
+            }
             performSegueWithIdentifier("secondViewController", sender: self)
             //stopTimers()
         }
@@ -157,6 +169,8 @@ class FirstViewController: UIViewController {
         print("button Special pressed")
         if(season == "cats") {
             searchTag.append("cats")
+            searchTag.append("cat")
+            searchTag.append("kitten")
             bgColor = "yellow"
         } else if(season == "christmas") {
             //

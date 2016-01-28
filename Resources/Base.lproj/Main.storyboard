@@ -195,16 +195,28 @@
                                         <rect key="frame" x="0.0" y="486" width="375" height="74"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ChM-DE-Rdo">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                                <rect key="frame" x="56" y="11" width="263" height="52"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="ChM-DE-Rdo" firstAttribute="centerX" secondItem="nek-dO-ZwF" secondAttribute="centerX" id="4Lm-Em-HUa"/>
+                                            <constraint firstItem="ChM-DE-Rdo" firstAttribute="centerY" secondItem="nek-dO-ZwF" secondAttribute="centerY" id="AR7-fu-1zb"/>
                                             <constraint firstAttribute="bottom" secondItem="ChM-DE-Rdo" secondAttribute="bottom" id="DZG-CY-7vf"/>
+                                            <constraint firstItem="ChM-DE-Rdo" firstAttribute="height" secondItem="nek-dO-ZwF" secondAttribute="height" multiplier="0.7" id="PXk-K1-vIi"/>
                                             <constraint firstItem="ChM-DE-Rdo" firstAttribute="top" secondItem="nek-dO-ZwF" secondAttribute="top" id="TW8-80-Lr5"/>
                                             <constraint firstAttribute="trailing" secondItem="ChM-DE-Rdo" secondAttribute="trailing" id="bdq-Jd-5mR"/>
                                             <constraint firstItem="ChM-DE-Rdo" firstAttribute="leading" secondItem="nek-dO-ZwF" secondAttribute="leading" id="hiq-r7-mmd"/>
+                                            <constraint firstItem="ChM-DE-Rdo" firstAttribute="width" secondItem="nek-dO-ZwF" secondAttribute="width" multiplier="0.7" id="vSN-EG-SS6"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DZG-CY-7vf"/>
+                                                <exclude reference="TW8-80-Lr5"/>
+                                                <exclude reference="bdq-Jd-5mR"/>
+                                                <exclude reference="hiq-r7-mmd"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHI-BK-WbO" userLabel="buttonview">
                                         <rect key="frame" x="0.0" y="567" width="375" height="100"/>

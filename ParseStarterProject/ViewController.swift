@@ -47,7 +47,6 @@ class ViewController: UIViewController {
                 let frameName = String(format: "swipe0%d", index)
                 swipeImageView.animationImages?.append(UIImage(named: frameName)!)
             }
-            
             swipeImageView.animationDuration = 2
             swipeImageView.startAnimating()
             
