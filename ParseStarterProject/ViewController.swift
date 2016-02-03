@@ -66,10 +66,10 @@ class ViewController: UIViewController {
         for var index = 1; index < 23; index++ {
             
             if(index < 10) {
-                let frameName = String(format: "Loadingscreen_0000%d", index)
+                let frameName = String(format: "Loadingscreendots_0000%d", index)
                 loadingImageView.animationImages?.append(UIImage(named: frameName)!)
             } else {
-                let frameName = String(format: "Loadingscreen_000%d", index)
+                let frameName = String(format: "Loadingscreendots_000%d", index)
                 loadingImageView.animationImages?.append(UIImage(named: frameName)!)
             }
             loadingImageView.animationDuration = 1

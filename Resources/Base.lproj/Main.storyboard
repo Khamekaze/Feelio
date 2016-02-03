@@ -202,7 +202,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvt-tf-aTe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologgavitUTANslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologgavitUTANslogan copy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
                                         <rect key="frame" x="0.0" y="35" width="375" height="80"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
@@ -468,7 +468,7 @@
         <image name="backbutton_dotted.png" width="607" height="308"/>
         <image name="catsbutton_stor.png" width="1567" height="558"/>
         <image name="dislikebutton_dotted.png" width="607" height="308"/>
-        <image name="feeliologgavitUTANslogan.png" width="1045" height="381"/>
+        <image name="feeliologgavitUTANslogan copy.png" width="500" height="182"/>
         <image name="feeliologgavitmedslogan.png" width="1045" height="489"/>
         <image name="happybutton1.png" width="771" height="617"/>
         <image name="likebutton_dotted.png" width="607" height="308"/>
