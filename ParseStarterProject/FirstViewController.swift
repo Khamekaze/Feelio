@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import ImageIO
 
 class FirstViewController: UIViewController {
     @IBOutlet weak var gifImageViewFirstPage: UIImageView!
@@ -19,6 +20,8 @@ class FirstViewController: UIViewController {
     
     var season = String()
     var bgColor = String()
+    var randomGif = UInt32()
+    var randomId = String()
 
     @IBOutlet weak var seasonImage: UIImageView!
     
@@ -28,6 +31,7 @@ class FirstViewController: UIViewController {
     var timer4 = NSTimer()
     
     var searchTag = [String]()
+    var g = Giphy(apiKey: "dc6zaTOxFJmzC")
   
     
     @IBOutlet weak var button1: UIView!
@@ -39,8 +43,26 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+       /* randomGif = arc4random_uniform(7)
+        if randomGif == 0{
+            self.randomId = "http://giphy.com/gifs/zlatan-ibrahimovic-eXK5SYAr8BPhu"
+        }else if randomGif == 1 {
+            self.randomId = "http://giphy.com/gifs/hilarious-laughing-yGE50nEVxqjFC"
+        }else if randomGif == 2 {
+            self.randomId = "http://giphy.com/gifs/90s-retro-commercials-26tPghhb310muUkEw"
+        }else if randomGif == 3 {
+            self.randomId = "http://giphy.com/gifs/frank-eyetalian-ughguhgw-xHlEA4pIxaGZi"
+        }else if randomGif == 4 {
+            self.randomId = "http://giphy.com/gifs/kittens-because-102mqDgAb4Kfug"
+        }else if randomGif == 5 {
+            self.randomId = "http://giphy.com/gifs/movie-happy-excited-WoYwgrfZP4yw8"
+        }else if randomGif == 6 {
+            self.randomId = "http://giphy.com/gifs/adorable-marilyn-monroe-cute-gif-rDE9JAGSfRkzK"
+        }else if randomGif == 7 {
+            self.randomId = "http://giphy.com/gifs/justin-bieber-dancing-dASc6rD8EOXEQ"
+        }
+   */
         let gesture1 = UITapGestureRecognizer(target: self, action: "button1Tap")
         let gesture2 = UITapGestureRecognizer(target: self, action: "button2Tap")
         let gesture3 = UITapGestureRecognizer(target: self, action: "button3Tap")
@@ -58,7 +80,9 @@ class FirstViewController: UIViewController {
         
         gifImageViewFirstPage.animationImages = [UIImage]()
         
-        for var index = 0; index < 60; index++ {
+        
+        
+    for var index = 0; index < 60; index++ {
             let frameName = String(format: "Comp 1_%05d", index)
             gifImageViewFirstPage.animationImages?.append(UIImage(named: frameName)!)
             gifImageViewFirstPage.animationDuration = 2
@@ -66,7 +90,7 @@ class FirstViewController: UIViewController {
  
             
         }
-        
+
         var query = PFQuery(className:"Season")
         query.getObjectInBackgroundWithId("FM2qfTOgGM") {
             (parseSeason: PFObject?, error: NSError?) -> Void in
@@ -128,7 +152,7 @@ class FirstViewController: UIViewController {
             } else if(selector == 4) {
                 button5Tap()
             }
-            performSegueWithIdentifier("secondViewController", sender: self)
+           // performSegueWithIdentifier("secondViewController", sender: self)
             //stopTimers()
         }
         

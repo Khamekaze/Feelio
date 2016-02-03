@@ -10,10 +10,15 @@
 import UIKit
 import Parse
 import ImageIO
+import SpriteKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var swipeImageView: UIImageView!
+    
+    @IBOutlet weak var loadingImageView: UIImageView!
+    
+    
     
     var gifId = String()
     var gifLikes = Int()
@@ -36,9 +41,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        
         swipeImageView.animationImages = [UIImage]()
         
-        for var index = 0; index < 41; index++ {
+        for var index = 25; index < 41; index++ {
             
             if(index < 10) {
                 let frameName = String(format: "swipe00%d", index)
@@ -47,11 +53,31 @@ class ViewController: UIViewController {
                 let frameName = String(format: "swipe0%d", index)
                 swipeImageView.animationImages?.append(UIImage(named: frameName)!)
             }
-            swipeImageView.animationDuration = 2
+            swipeImageView.animationDuration = 3
             swipeImageView.startAnimating()
             
             
         }
+        
+        
+        
+        loadingImageView.animationImages = [UIImage]()
+        
+        for var index = 1; index < 23; index++ {
+            
+            if(index < 10) {
+                let frameName = String(format: "Loadingscreen_0000%d", index)
+                loadingImageView.animationImages?.append(UIImage(named: frameName)!)
+            } else {
+                let frameName = String(format: "Loadingscreen_000%d", index)
+                loadingImageView.animationImages?.append(UIImage(named: frameName)!)
+            }
+            loadingImageView.animationDuration = 1
+            loadingImageView.startAnimating()
+            
+            
+        }
+
         
         
         
@@ -95,6 +121,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func randomGifSwipe(sender: AnyObject) {
+        self.loadingImageView.hidden = false
+        self.gifImage.hidden = true
         var random = arc4random_uniform(UInt32(searchTag.count))
         g.random(searchTag[Int(random)], rating: nil) { gif, err in
             let json = JSON((gif?.json)!)
@@ -104,12 +132,15 @@ class ViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue(), {
                 self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
                 self.gifImage.startAnimating()
+                self.loadingImageView.hidden = true
+                self.gifImage.hidden = false
                 self.gifId = (gif?.id)!
                 print("GifID: \(self.gifId)")
                 self.getGifInfo()
             })
         }
     }
+    
     
     func randomGif() {
         var random = arc4random_uniform(UInt32(searchTag.count))
@@ -315,4 +346,9 @@ class ViewController: UIViewController {
         self.presentViewController(activityVC, animated: true, completion: nil)
         
     }
+    
+    @IBAction func backButton(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 }
