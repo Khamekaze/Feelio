@@ -18,6 +18,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loadingImageView: UIImageView!
     
+    @IBOutlet weak var swipeButtonUIView: UIView!
+    
+    @IBOutlet weak var swipeButtonOUTLET: UIButton!
+    
+    @IBOutlet weak var likeBackgroundView: UIView!
+    
+    @IBOutlet weak var shareBackgroundView: UIView!
+    
+    @IBOutlet weak var textImageView: UIImageView!
     
     
     var gifId = String()
@@ -32,7 +41,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var likeLabel: UILabel!
+
     @IBOutlet weak var gifImage: UIImageView!
     @IBOutlet weak var button: UIButton!
     var g = Giphy(apiKey: "dc6zaTOxFJmzC")
@@ -41,25 +50,44 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        swipeButtonUIView.layer.cornerRadius = swipeButtonUIView.frame.size.width/2
+        swipeButtonUIView.layer.borderColor = UIColor.whiteColor().CGColor
+        swipeButtonUIView.layer.borderWidth = 1
         
-        swipeImageView.animationImages = [UIImage]()
+        likeBackgroundView.layer.cornerRadius = likeBackgroundView.frame.size.width/2
+        likeBackgroundView.layer.borderColor = UIColor.whiteColor().CGColor
+        likeBackgroundView.layer.borderWidth = 1
         
-        for var index = 25; index < 41; index++ {
-            
-            if(index < 10) {
-                let frameName = String(format: "swipe00%d", index)
-                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
-            } else {
-                let frameName = String(format: "swipe0%d", index)
-                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
-            }
-            swipeImageView.animationDuration = 3
-            swipeImageView.startAnimating()
-            
-            
-        }
+        shareBackgroundView.layer.cornerRadius = shareBackgroundView.frame.size.width/2
+        shareBackgroundView.layer.borderColor = UIColor.whiteColor().CGColor
+        shareBackgroundView.layer.borderWidth = 1
         
         
+        
+//       swipeImageView.animationImages = [UIImage]()
+        
+//        for var index = 25; index < 41; index++ {
+//            
+//
+//            
+//            if(index < 10) {
+//                let frameName = String(format: "swipe00%d", index)
+//                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
+//            } else {
+//                let frameName = String(format: "swipe0%d", index)
+//                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
+//            }
+//            swipeImageView.animationDuration = 3
+//            
+//            swipeImageView.startAnimating()
+//            
+//            
+//        }
+        
+        
+        
+        //self.swipeImageView.image = swipeImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        //self.swipeImageView.tintColor = UIColor.orangeColor()
         
         loadingImageView.animationImages = [UIImage]()
         
@@ -73,7 +101,7 @@ class ViewController: UIViewController {
                 loadingImageView.animationImages?.append(UIImage(named: frameName)!)
             }
             loadingImageView.animationDuration = 1
-            loadingImageView.startAnimating()
+            
             
             
         }
@@ -98,20 +126,37 @@ class ViewController: UIViewController {
         print(bgColor)
         
         if(bgColor == "yellow") {
-            self.view.backgroundColor = UIColor(red: 219.0/255.0, green: 197.0/255.0, blue: 44.0/255.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: 252.0/255.0, green: 193.0/255.0, blue: 13.0/255.0, alpha: 1.0)
+            swipeButtonOUTLET.setImage(UIImage(named: "catsbutton_second_page"), forState: UIControlState.Normal)
+            textImageView.image = UIImage(named: "cats_text")
+
         } else if(bgColor == "green") {
-            self.view.backgroundColor = UIColor(red: 40.0/255.0, green: 152.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: 49.0/255.0, green: 170.0/255.0, blue: 89.0/255.0, alpha: 1.0)
+
+            swipeButtonOUTLET.setImage(UIImage(named: "happybutton_second_page"), forState: UIControlState.Normal)
+            textImageView.image = UIImage(named: "happy_text")
+            
             
         } else if(bgColor == "purple") {
-            self.view.backgroundColor = UIColor(red: 129.0/255.0, green: 0.0/255.0, blue: 110.0/255.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: 137.0/255.0, green: 31.0/255.0, blue: 119.0/255.0, alpha: 1.0)
+            swipeButtonOUTLET.setImage(UIImage(named: "affectionatedbutton_second_page"), forState: UIControlState.Normal)
+            textImageView.image = UIImage(named: "affectionated_text")
+            
         } else if(bgColor == "blue") {
-            self.view.backgroundColor = UIColor(red: 39.0/255.0, green: 152.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: 61.0/255.0, green: 164.0/255.0, blue: 218.0/255.0, alpha: 1.0)
+            swipeButtonOUTLET.setImage(UIImage(named: "pumpedbutton_second_page"), forState: UIControlState.Normal)
+            textImageView.image = UIImage(named: "pumped_text")
             
         } else if(bgColor == "orange") {
-            self.view.backgroundColor = UIColor(red: 208.0/255.0, green: 104.0/255.0, blue: 33.0/255.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: 216.0/255.0, green: 105.0/255.0, blue: 48.0/255.0, alpha: 1.0)
+            swipeButtonOUTLET.setImage(UIImage(named: "pressurizedbutton_second_page"), forState: UIControlState.Normal)
+            textImageView.image = UIImage(named: "pressurized_text")
         }
         
         randomGif()
+        self.swipeButtonUIView.backgroundColor = view.backgroundColor
+        self.shareBackgroundView.backgroundColor = view.backgroundColor
+        self.likeBackgroundView.backgroundColor = view.backgroundColor
         
     }
 
@@ -121,7 +166,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func randomGifSwipe(sender: AnyObject) {
-        self.loadingImageView.hidden = false
+        //self.loadingImageView.hidden = false
+        self.loadingImageView.startAnimating()
         self.gifImage.hidden = true
         var random = arc4random_uniform(UInt32(searchTag.count))
         g.random(searchTag[Int(random)], rating: nil) { gif, err in
@@ -132,7 +178,8 @@ class ViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue(), {
                 self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
                 self.gifImage.startAnimating()
-                self.loadingImageView.hidden = true
+                //self.loadingImageView.hidden = true
+                self.loadingImageView.stopAnimating()
                 self.gifImage.hidden = false
                 self.gifId = (gif?.id)!
                 print("GifID: \(self.gifId)")
@@ -198,7 +245,7 @@ class ViewController: UIViewController {
                     gifInfo.saveInBackground()
                     print("Gif Liked")
                     self.gifLikes = self.gifLikes + 1
-                    self.likeLabel.text = String(self.gifLikes)
+
                     self.likeButton.hidden = true
                     self.dislikeButton.hidden = false
                     
@@ -241,7 +288,7 @@ class ViewController: UIViewController {
                     gifInfo.saveInBackground()
                     print("Gif Disliked")
                     self.gifLikes = self.gifLikes - 1
-                    self.likeLabel.text = String(self.gifLikes)
+
                     self.likeButton.hidden = false
                     self.dislikeButton.hidden = true
                     
@@ -284,7 +331,7 @@ class ViewController: UIViewController {
                                     self.gifObjectId = object.objectId!
                                     self.gifLikes = object["likes"] as! Int
                                     self.gifUsers = object["likedByUsers"] as! [String]
-                                    self.likeLabel.text = String(self.gifLikes)
+
                                     print("liked by users \(self.gifUsers)")
                                     print("Likes: \(self.gifLikes)")
                                     let userContains = self.gifUsers.contains((user?.username)!)
@@ -321,7 +368,7 @@ class ViewController: UIViewController {
                             print("GifCreated")
                             print("this user has NOT liked this GIF")
                             self.gifLikes = 0
-                            self.likeLabel.text = String(self.gifLikes)
+
                             self.likeButton.hidden = false
                             self.dislikeButton.hidden = true
                         } else {
@@ -350,5 +397,8 @@ class ViewController: UIViewController {
     @IBAction func backButton(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    @IBOutlet weak var swipeButtonACTION: UIButton!
+    
     
 }

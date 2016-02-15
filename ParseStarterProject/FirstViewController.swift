@@ -22,6 +22,7 @@ class FirstViewController: UIViewController {
     var bgColor = String()
     var randomGif = UInt32()
     var randomId = String()
+    var p2CategoryButton = String()
 
     @IBOutlet weak var seasonImage: UIImageView!
     
@@ -75,6 +76,7 @@ class FirstViewController: UIViewController {
         self.button3.addGestureRecognizer(gesture3)
         self.button4.addGestureRecognizer(gesture4)
         self.button5.addGestureRecognizer(gesture5)
+        
 
         
         
@@ -195,6 +197,7 @@ class FirstViewController: UIViewController {
             searchTag.append("cats")
             searchTag.append("cat")
             searchTag.append("kitten")
+            searchTag.append("kittens")
             bgColor = "yellow"
         } else if(season == "christmas") {
             //
@@ -209,7 +212,6 @@ class FirstViewController: UIViewController {
     func button4Tap(){
          print("button Happy pressed")
         searchTag.append("happy")
-        searchTag.append("excited")
         searchTag.append("glad")
         searchTag.append("joy")
         bgColor = "green"
@@ -227,6 +229,7 @@ class FirstViewController: UIViewController {
     func button2Tap(){
          print("button Pumped pressed")
         searchTag.append("pumped")
+        searchTag.append("excited")
         searchTag.append("thrilled")
         searchTag.append("gains")
         searchTag.append("fight")
@@ -239,6 +242,7 @@ class FirstViewController: UIViewController {
         searchTag.append("rage")
         searchTag.append("frustrated")
         searchTag.append("stressed")
+        searchTag.append("mad")
         searchTag.append("angry")
         bgColor = "orange"
         performSegueWithIdentifier("secondViewController", sender: self)

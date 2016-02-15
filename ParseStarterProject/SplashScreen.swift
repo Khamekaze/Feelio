@@ -27,14 +27,15 @@ class SplashScreen: UIViewController {
             
         }*/
         
-        for var index = 0; index < 37; index++ {
+        for var index = 0; index < 47; index++ {
             
             if(index < 10) {
-                let frameName = String(format: "Splashscreen00%d", index)
+                let frameName = String(format: "Splashio_0000%d", index)
                 imageLoader.animationImages?.append(UIImage(named: frameName)!)
             } else {
-                let frameName = String(format: "Splashscreen0%d", index)
+                let frameName = String(format: "Splashio_000%d", index)
                 imageLoader.animationImages?.append(UIImage(named: frameName)!)
+                //Splashio_00000
                 
             }
             
@@ -55,8 +56,8 @@ class SplashScreen: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        NSTimer.scheduledTimerWithTimeInterval(1.95, target: self, selector: "update", userInfo: nil, repeats: false)
-        imageLoader.animationDuration = 2
+        NSTimer.scheduledTimerWithTimeInterval(1.9, target: self, selector: "update", userInfo: nil, repeats: false)
+        imageLoader.animationDuration = 2.2
         imageLoader.animationRepeatCount = 1
         imageLoader.startAnimating()
         
