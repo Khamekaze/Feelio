@@ -51,16 +51,19 @@ class ViewController: UIViewController {
         
         
         swipeButtonUIView.layer.cornerRadius = swipeButtonUIView.frame.size.width/2
+//        swipeButtonUIView.layer.masksToBounds = true
         swipeButtonUIView.layer.borderColor = UIColor.whiteColor().CGColor
-        swipeButtonUIView.layer.borderWidth = 1
+        swipeButtonUIView.layer.borderWidth = 1.3
+
         
         likeBackgroundView.layer.cornerRadius = likeBackgroundView.frame.size.width/2
         likeBackgroundView.layer.borderColor = UIColor.whiteColor().CGColor
-        likeBackgroundView.layer.borderWidth = 1
+        likeBackgroundView.layer.borderWidth = 1.3
         
         shareBackgroundView.layer.cornerRadius = shareBackgroundView.frame.size.width/2
         shareBackgroundView.layer.borderColor = UIColor.whiteColor().CGColor
-        shareBackgroundView.layer.borderWidth = 1
+        shareBackgroundView.layer.borderWidth = 1.3
+
         
         
         
@@ -397,8 +400,28 @@ class ViewController: UIViewController {
     @IBAction func backButton(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
-    @IBOutlet weak var swipeButtonACTION: UIButton!
-    
-    
+
+    @IBAction func swipeButtonACTION(sender: AnyObject) {
+        
+        //self.loadingImageView.hidden = false
+        self.loadingImageView.startAnimating()
+        self.gifImage.hidden = true
+        var random = arc4random_uniform(UInt32(searchTag.count))
+        g.random(searchTag[Int(random)], rating: nil) { gif, err in
+            let json = JSON((gif?.json)!)
+            let urlString = json["image_original_url"].string
+            self.globalGifURL = urlString!
+            let url: NSURL = NSURL(string: urlString!)!
+            dispatch_async(dispatch_get_main_queue(), {
+                self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                self.gifImage.startAnimating()
+                //self.loadingImageView.hidden = true
+                self.loadingImageView.stopAnimating()
+                self.gifImage.hidden = false
+                self.gifId = (gif?.id)!
+                print("GifID: \(self.gifId)")
+                self.getGifInfo()
+            })
+        }
+    }
 }

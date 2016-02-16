@@ -230,8 +230,6 @@ class FirstViewController: UIViewController {
          print("button Pumped pressed")
         searchTag.append("pumped")
         searchTag.append("excited")
-        searchTag.append("thrilled")
-        searchTag.append("gains")
         searchTag.append("fight")
         bgColor = "blue"
         performSegueWithIdentifier("secondViewController", sender: self)
