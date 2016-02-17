@@ -11,6 +11,7 @@ import UIKit
 import Parse
 import ImageIO
 import SpriteKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -45,15 +46,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var gifImage: UIImageView!
     @IBOutlet weak var button: UIButton!
     var g = Giphy(apiKey: "dc6zaTOxFJmzC")
+    
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.makeCircleView(self.swipeButtonUIView)
+        self.makeCircleView(self.likeBackgroundView)
+        self.makeCircleView(self.shareBackgroundView)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        swipeButtonUIView.layer.cornerRadius = swipeButtonUIView.frame.size.width/2
+        /*
+        swipeButtonUIView.layer.cornerRadius = swipeButtonUIView.bounds.size.width/2
+        swipeButtonUIView.clipsToBounds = true
 //        swipeButtonUIView.layer.masksToBounds = true
         swipeButtonUIView.layer.borderColor = UIColor.whiteColor().CGColor
         swipeButtonUIView.layer.borderWidth = 1.3
+
 
         
         likeBackgroundView.layer.cornerRadius = likeBackgroundView.frame.size.width/2
@@ -63,8 +75,7 @@ class ViewController: UIViewController {
         shareBackgroundView.layer.cornerRadius = shareBackgroundView.frame.size.width/2
         shareBackgroundView.layer.borderColor = UIColor.whiteColor().CGColor
         shareBackgroundView.layer.borderWidth = 1.3
-
-        
+*/
         
         
 //       swipeImageView.animationImages = [UIImage]()
@@ -166,6 +177,19 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func makeCircleView(view: UIView) {
+        let size: CGFloat = min(view.frame.height, view.frame.width)
+        let center: CGPoint = view.center
+        let frame: CGRect = CGRectMake(view.frame.origin.x, view.frame.origin.y, size, size)
+        view.frame = frame
+        view.layer.cornerRadius = size / 2
+        view.center = center
+        view.clipsToBounds = true
+        view.layer.masksToBounds = true
+        view.layer.borderWidth = 1.3
+        view.layer.borderColor = UIColor.whiteColor().CGColor
     }
 
     @IBAction func randomGifSwipe(sender: AnyObject) {

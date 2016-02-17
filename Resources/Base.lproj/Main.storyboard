@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wds-Pg-Veg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wds-Pg-Veg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -202,24 +202,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvt-tf-aTe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="feeliologgavitUTANslogan copy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="80"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feeliologgavitUTANslogan copy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Heg-GV-nz4">
+                                        <rect key="frame" x="0.0" y="25" width="375" height="33"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
-                                        <rect key="frame" x="0.0" y="73" width="375" height="461"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredBy_200px-White_HorizText.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAU-ob-rai">
+                                        <rect key="frame" x="0.0" y="73" width="188" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GAU-ob-rai" secondAttribute="height" multiplier="94:11" id="FIS-HE-Ptz"/>
+                                        </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PoweredBy_200px-White_HorizText.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAU-ob-rai">
-                                        <rect key="frame" x="175" y="464" width="200" height="22"/>
-                                    </imageView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMD-v3-ccv">
-                                        <rect key="frame" x="321" y="8" width="46" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMD-v3-ccv">
+                                        <rect key="frame" x="324" y="5" width="46" height="30"/>
                                         <state key="normal" title="GifInfo"/>
                                         <connections>
                                             <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRP-fE-RZc"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ays-aI-i4C">
-                                        <rect key="frame" x="118" y="209" width="140" height="140"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ays-aI-i4C">
+                                        <rect key="frame" x="118" y="234" width="140" height="140"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="Gdk-Ky-bt3"/>
                                             <constraint firstAttribute="height" constant="140" id="pD4-vH-xaB"/>
@@ -248,8 +248,8 @@
                                             <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQ8-by-pYG"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHI-BK-WbO" userLabel="buttonview">
-                                        <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHI-BK-WbO" userLabel="buttonview">
+                                        <rect key="frame" x="0.0" y="534" width="375" height="133"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scl-zz-WB6">
                                                 <rect key="frame" x="134" y="-53" width="107" height="107"/>
@@ -270,9 +270,9 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0W-3g-qOq">
-                                                <rect key="frame" x="278" y="-40" width="81" height="80"/>
+                                                <rect key="frame" x="279" y="-40" width="80" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30q-RZ-Hml">
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30q-RZ-Hml">
                                                         <rect key="frame" x="0.0" y="0.0" width="81" height="80"/>
                                                         <state key="normal" image="shareknapp3.png"/>
                                                         <connections>
@@ -290,9 +290,9 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDL-P9-vpI">
-                                                <rect key="frame" x="16" y="-40" width="81" height="80"/>
+                                                <rect key="frame" x="17" y="-40" width="80" height="80"/>
                                                 <subviews>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-h2-TV9">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnJ-h2-TV9">
                                                         <rect key="frame" x="0.0" y="0.0" width="81" height="80"/>
                                                         <state key="normal" title="LIKE" image="likeknapp3.png">
                                                             <color key="titleColor" red="1" green="0.047743847929451966" blue="0.1074305350526511" alpha="1" colorSpace="calibratedRGB"/>
@@ -301,7 +301,7 @@
                                                             <action selector="likeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2wH-Py-y2U"/>
                                                         </connections>
                                                     </button>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-9R-u3b">
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkQ-9R-u3b">
                                                         <rect key="frame" x="0.0" y="0.0" width="81" height="80"/>
                                                         <state key="normal" title="DISLIKE" image="dislikeknapp3.png">
                                                             <color key="titleColor" red="1" green="0.04774384793" blue="0.1074305351" alpha="1" colorSpace="calibratedRGB"/>
@@ -315,22 +315,14 @@
                                                 <constraints>
                                                     <constraint firstItem="LnJ-h2-TV9" firstAttribute="top" secondItem="sDL-P9-vpI" secondAttribute="top" id="Rpa-qf-PGl"/>
                                                     <constraint firstItem="KkQ-9R-u3b" firstAttribute="top" secondItem="sDL-P9-vpI" secondAttribute="top" id="Ue5-LV-pTB"/>
-                                                    <constraint firstAttribute="height" constant="80" id="W9l-Ol-fIO"/>
-                                                    <constraint firstAttribute="width" secondItem="sDL-P9-vpI" secondAttribute="height" multiplier="1:1" id="dwS-Vl-gxK"/>
                                                     <constraint firstItem="KkQ-9R-u3b" firstAttribute="leading" secondItem="sDL-P9-vpI" secondAttribute="leading" id="fZa-WP-Sje"/>
                                                     <constraint firstAttribute="trailing" secondItem="LnJ-h2-TV9" secondAttribute="trailing" id="ibh-o6-YIL"/>
                                                     <constraint firstItem="LnJ-h2-TV9" firstAttribute="leading" secondItem="sDL-P9-vpI" secondAttribute="leading" id="jwp-Jw-gBb"/>
-                                                    <constraint firstAttribute="width" secondItem="KkQ-9R-u3b" secondAttribute="width" id="mOE-MQ-Crh"/>
                                                     <constraint firstAttribute="trailing" secondItem="KkQ-9R-u3b" secondAttribute="trailing" id="nye-1W-V81"/>
+                                                    <constraint firstAttribute="width" secondItem="sDL-P9-vpI" secondAttribute="height" multiplier="1:1" id="uE2-zd-AeE"/>
                                                     <constraint firstAttribute="bottom" secondItem="LnJ-h2-TV9" secondAttribute="bottom" id="vn7-1I-jRq"/>
                                                     <constraint firstAttribute="bottom" secondItem="KkQ-9R-u3b" secondAttribute="bottom" id="zlU-s6-uqf"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="W9l-Ol-fIO"/>
-                                                        <exclude reference="mOE-MQ-Crh"/>
-                                                    </mask>
-                                                </variation>
                                             </view>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-Qr-JkF">
                                                 <rect key="frame" x="75" y="66" width="225" height="40"/>
@@ -352,19 +344,26 @@
                                             <constraint firstItem="PSv-Qr-JkF" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="centerY" multiplier="1.3" id="wtJ-yk-YGG"/>
                                         </constraints>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RNN-wr-lQR">
+                                        <rect key="frame" x="0.0" y="73" width="375" height="461"/>
+                                    </imageView>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="rMD-v3-ccv" secondAttribute="trailing" constant="5" id="2zr-l3-o5O"/>
                                     <constraint firstAttribute="trailing" secondItem="Heg-GV-nz4" secondAttribute="trailing" id="32b-6e-Fpf"/>
+                                    <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="bEh-oJ-pRs" secondAttribute="bottom" id="5Ug-HX-5Ni"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="top" secondItem="Heg-GV-nz4" secondAttribute="bottom" constant="15" id="7qX-M7-hIg"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="92g-eb-tyt"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="BNz-Hw-q2g"/>
                                     <constraint firstItem="qHI-BK-WbO" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="bottom" id="EYC-LY-SOU"/>
+                                    <constraint firstItem="GAU-ob-rai" firstAttribute="width" secondItem="RNN-wr-lQR" secondAttribute="width" multiplier="0.5" id="GXv-c0-PCw"/>
                                     <constraint firstAttribute="trailing" secondItem="qHI-BK-WbO" secondAttribute="trailing" id="Hel-6l-J9z"/>
                                     <constraint firstItem="Ays-aI-i4C" firstAttribute="centerX" secondItem="RNN-wr-lQR" secondAttribute="centerX" id="Iq8-oA-peJ"/>
                                     <constraint firstItem="bEh-oJ-pRs" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="10" id="Lbk-Cy-tiL"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="height" secondItem="RNN-wr-lQR" secondAttribute="height" multiplier="0.09" id="PED-4M-Uke"/>
+                                    <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="top" id="XLx-6O-J8j"/>
+                                    <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="110" id="YId-7F-KvC"/>
                                     <constraint firstAttribute="bottom" secondItem="qHI-BK-WbO" secondAttribute="bottom" id="ZL5-bY-raq"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="bottom" secondItem="RNN-wr-lQR" secondAttribute="bottom" id="b6G-GB-QMg"/>
                                     <constraint firstItem="Ays-aI-i4C" firstAttribute="centerY" secondItem="RNN-wr-lQR" secondAttribute="centerY" id="dUg-Pe-oeY"/>
@@ -383,6 +382,7 @@
                                     <constraint firstAttribute="trailing" secondItem="GAU-ob-rai" secondAttribute="trailing" id="qMe-AS-Uka"/>
                                     <constraint firstItem="bEh-oJ-pRs" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" constant="10" id="s3g-Mj-fJI"/>
                                     <constraint firstItem="qHI-BK-WbO" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="bottom" id="tNE-Jd-GUP"/>
+                                    <constraint firstItem="GAU-ob-rai" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="tQ7-F3-xWh"/>
                                     <constraint firstItem="qHI-BK-WbO" firstAttribute="height" secondItem="Gvt-tf-aTe" secondAttribute="height" multiplier="0.2" id="tyC-pk-wSe"/>
                                     <constraint firstItem="Heg-GV-nz4" firstAttribute="height" secondItem="Gvt-tf-aTe" secondAttribute="height" multiplier="0.05" id="u3a-w2-eNT"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="bottom" secondItem="RNN-wr-lQR" secondAttribute="bottom" id="ueG-cx-3Or"/>
@@ -391,12 +391,17 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="eeW-3P-5bo"/>
+                                        <exclude reference="5Ug-HX-5Ni"/>
                                         <exclude reference="BNz-Hw-q2g"/>
                                         <exclude reference="PED-4M-Uke"/>
+                                        <exclude reference="YId-7F-KvC"/>
+                                        <exclude reference="b6G-GB-QMg"/>
                                         <exclude reference="diM-Yu-P1X"/>
                                         <exclude reference="h4n-gC-QYx"/>
                                         <exclude reference="iJb-pZ-0LO"/>
+                                        <exclude reference="len-Tf-ley"/>
                                         <exclude reference="pG7-re-Loh"/>
+                                        <exclude reference="qMe-AS-Uka"/>
                                         <exclude reference="ueG-cx-3Or"/>
                                         <exclude reference="EYC-LY-SOU"/>
                                     </mask>
