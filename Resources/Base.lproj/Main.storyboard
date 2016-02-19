@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wds-Pg-Veg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wds-Pg-Veg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -129,7 +129,7 @@
                                     <constraint firstAttribute="bottom" secondItem="7ZR-zT-Fh3" secondAttribute="bottom" id="oaP-Sd-bRq"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E63-lV-sXg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E63-lV-sXg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feeliologgavitmedslogan.png" translatesAutoresizingMaskIntoConstraints="NO" id="aE2-kb-3fh">
@@ -139,11 +139,20 @@
                                     <constraint firstAttribute="width" constant="252" id="txW-9p-Jmp"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Internet Connection Available, Connect To A Network To Load GIFS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNI-I3-mF5">
+                                <rect key="frame" x="0.0" y="63" width="375" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n4S-4a-KBI" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="2eI-yc-ANG"/>
+                            <constraint firstAttribute="trailing" secondItem="UNI-I3-mF5" secondAttribute="trailing" id="38J-tk-485"/>
                             <constraint firstItem="KhX-Rr-ewj" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.22" id="3AV-m6-JV0"/>
+                            <constraint firstItem="aE2-kb-3fh" firstAttribute="top" secondItem="UNI-I3-mF5" secondAttribute="bottom" id="4Z9-fe-nVu"/>
                             <constraint firstAttribute="trailing" secondItem="3F7-aI-RxX" secondAttribute="trailing" id="5eS-9E-5XM"/>
                             <constraint firstItem="n4S-4a-KBI" firstAttribute="top" secondItem="gT9-uo-ClA" secondAttribute="bottom" constant="1" id="7Hf-0z-yDe"/>
                             <constraint firstItem="E63-lV-sXg" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="8MM-TP-ISt"/>
@@ -152,10 +161,12 @@
                             <constraint firstItem="gT9-uo-ClA" firstAttribute="top" secondItem="msV-Qz-xqM" secondAttribute="bottom" constant="1" id="Exo-VB-9yk"/>
                             <constraint firstItem="msV-Qz-xqM" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.2" id="Nue-a1-7c1"/>
                             <constraint firstItem="E63-lV-sXg" firstAttribute="top" secondItem="dXn-GE-6Bu" secondAttribute="top" id="QKd-eu-hHf"/>
+                            <constraint firstItem="UNI-I3-mF5" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="R7S-Vx-hab"/>
                             <constraint firstItem="9dW-VD-Stw" firstAttribute="top" secondItem="n4S-4a-KBI" secondAttribute="bottom" id="Y2Q-XR-Rwp"/>
                             <constraint firstItem="KhX-Rr-ewj" firstAttribute="width" secondItem="dXn-GE-6Bu" secondAttribute="width" multiplier="0.499" id="Yw3-oY-iDY"/>
                             <constraint firstItem="gT9-uo-ClA" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="ZSU-r6-Kl4"/>
                             <constraint firstItem="3F7-aI-RxX" firstAttribute="width" secondItem="dXn-GE-6Bu" secondAttribute="width" multiplier="0.499" id="aIV-m6-OgC"/>
+                            <constraint firstAttribute="trailing" secondItem="UNI-I3-mF5" secondAttribute="trailing" id="aOV-sk-3PE"/>
                             <constraint firstItem="9dW-VD-Stw" firstAttribute="top" secondItem="KhX-Rr-ewj" secondAttribute="bottom" id="bUy-ec-Vrj"/>
                             <constraint firstItem="msV-Qz-xqM" firstAttribute="top" secondItem="E63-lV-sXg" secondAttribute="bottom" constant="1" id="buT-Kp-guG"/>
                             <constraint firstAttribute="trailing" secondItem="E63-lV-sXg" secondAttribute="trailing" id="d1P-hq-Ost"/>
@@ -163,12 +174,21 @@
                             <constraint firstItem="n4S-4a-KBI" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.22" id="k6i-Sl-hZK"/>
                             <constraint firstItem="gT9-uo-ClA" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.22" id="mnd-9Y-Hpd"/>
                             <constraint firstItem="aE2-kb-3fh" firstAttribute="centerX" secondItem="dXn-GE-6Bu" secondAttribute="centerX" id="o6c-Ii-Hak"/>
+                            <constraint firstItem="UNI-I3-mF5" firstAttribute="top" secondItem="dXn-GE-6Bu" secondAttribute="top" id="qMf-Q2-hAB"/>
                             <constraint firstItem="gT9-uo-ClA" firstAttribute="width" secondItem="dXn-GE-6Bu" secondAttribute="width" multiplier="0.499" id="sZ3-9Z-XjK"/>
                             <constraint firstAttribute="trailing" secondItem="msV-Qz-xqM" secondAttribute="trailing" id="scC-lH-2Ch"/>
                             <constraint firstItem="3F7-aI-RxX" firstAttribute="height" secondItem="dXn-GE-6Bu" secondAttribute="height" multiplier="0.22" id="tZo-Ec-sO2"/>
                             <constraint firstItem="msV-Qz-xqM" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="vLD-Cv-Vld"/>
+                            <constraint firstItem="UNI-I3-mF5" firstAttribute="leading" secondItem="dXn-GE-6Bu" secondAttribute="leading" id="xPY-Xm-l78"/>
                             <constraint firstItem="n4S-4a-KBI" firstAttribute="width" secondItem="dXn-GE-6Bu" secondAttribute="width" multiplier="0.499" id="z2P-ak-Ev5"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R7S-Vx-hab"/>
+                                <exclude reference="aOV-sk-3PE"/>
+                                <exclude reference="qMf-Q2-hAB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="yoQ-Tf-BhB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -347,21 +367,31 @@
                                             <constraint firstAttribute="height" constant="140" id="pD4-vH-xaB"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Internet Connection Available, Connect To A Network To Load GIFS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="312-eM-tn6">
+                                        <rect key="frame" x="0.0" y="103" width="375" height="67"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="rMD-v3-ccv" secondAttribute="trailing" constant="5" id="2zr-l3-o5O"/>
                                     <constraint firstAttribute="trailing" secondItem="Heg-GV-nz4" secondAttribute="trailing" id="32b-6e-Fpf"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="bEh-oJ-pRs" secondAttribute="bottom" id="5Ug-HX-5Ni"/>
+                                    <constraint firstItem="312-eM-tn6" firstAttribute="top" secondItem="GAU-ob-rai" secondAttribute="bottom" id="61y-bY-zhs"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="top" secondItem="Heg-GV-nz4" secondAttribute="bottom" constant="15" id="7qX-M7-hIg"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="92g-eb-tyt"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="BNz-Hw-q2g"/>
+                                    <constraint firstAttribute="trailing" secondItem="312-eM-tn6" secondAttribute="trailing" id="Ch7-1L-1GX"/>
                                     <constraint firstItem="qHI-BK-WbO" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="bottom" id="EYC-LY-SOU"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="width" secondItem="RNN-wr-lQR" secondAttribute="width" multiplier="0.5" id="GXv-c0-PCw"/>
                                     <constraint firstAttribute="trailing" secondItem="qHI-BK-WbO" secondAttribute="trailing" id="Hel-6l-J9z"/>
                                     <constraint firstItem="Ays-aI-i4C" firstAttribute="centerX" secondItem="RNN-wr-lQR" secondAttribute="centerX" id="Iq8-oA-peJ"/>
                                     <constraint firstItem="bEh-oJ-pRs" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="24" id="Lbk-Cy-tiL"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="height" secondItem="RNN-wr-lQR" secondAttribute="height" multiplier="0.09" id="PED-4M-Uke"/>
+                                    <constraint firstItem="312-eM-tn6" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="PwP-xt-eAx"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="top" id="XLx-6O-J8j"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="110" id="YId-7F-KvC"/>
                                     <constraint firstAttribute="bottom" secondItem="qHI-BK-WbO" secondAttribute="bottom" id="ZL5-bY-raq"/>
@@ -427,10 +457,12 @@
                         <outlet property="likeBackgroundView" destination="sDL-P9-vpI" id="gc5-Sh-wl9"/>
                         <outlet property="likeButton" destination="LnJ-h2-TV9" id="o71-g2-8a2"/>
                         <outlet property="loadingImageView" destination="Ays-aI-i4C" id="DZ4-sa-kfy"/>
+                        <outlet property="noInternetLabel" destination="312-eM-tn6" id="eq0-oV-RVz"/>
                         <outlet property="shareBackgroundView" destination="I0W-3g-qOq" id="Sch-Ac-c4F"/>
                         <outlet property="swipeButtonOUTLET" destination="iMO-HO-6uP" id="wr9-5q-npA"/>
                         <outlet property="swipeButtonUIView" destination="scl-zz-WB6" id="FyQ-gD-rut"/>
                         <outlet property="textImageView" destination="PSv-Qr-JkF" id="3wx-UB-KZq"/>
+                        <segue destination="s5z-K7-e7x" kind="show" identifier="firstViewController" id="Xuy-qk-WMC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -475,4 +507,7 @@
         <image name="pumpedbutton2.png" width="771" height="617"/>
         <image name="shareknapp3.png" width="326" height="326"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Xuy-qk-WMC"/>
+    </inferredMetricsTieBreakers>
 </document>

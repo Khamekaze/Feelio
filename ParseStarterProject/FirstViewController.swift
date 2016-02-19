@@ -44,26 +44,8 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       /* randomGif = arc4random_uniform(7)
-        if randomGif == 0{
-            self.randomId = "http://giphy.com/gifs/zlatan-ibrahimovic-eXK5SYAr8BPhu"
-        }else if randomGif == 1 {
-            self.randomId = "http://giphy.com/gifs/hilarious-laughing-yGE50nEVxqjFC"
-        }else if randomGif == 2 {
-            self.randomId = "http://giphy.com/gifs/90s-retro-commercials-26tPghhb310muUkEw"
-        }else if randomGif == 3 {
-            self.randomId = "http://giphy.com/gifs/frank-eyetalian-ughguhgw-xHlEA4pIxaGZi"
-        }else if randomGif == 4 {
-            self.randomId = "http://giphy.com/gifs/kittens-because-102mqDgAb4Kfug"
-        }else if randomGif == 5 {
-            self.randomId = "http://giphy.com/gifs/movie-happy-excited-WoYwgrfZP4yw8"
-        }else if randomGif == 6 {
-            self.randomId = "http://giphy.com/gifs/adorable-marilyn-monroe-cute-gif-rDE9JAGSfRkzK"
-        }else if randomGif == 7 {
-            self.randomId = "http://giphy.com/gifs/justin-bieber-dancing-dASc6rD8EOXEQ"
-        }
-   */
+        var g = Giphy(apiKey: "dc6zaTOxFJmzC")
+
         let gesture1 = UITapGestureRecognizer(target: self, action: "button1Tap")
         let gesture2 = UITapGestureRecognizer(target: self, action: "button2Tap")
         let gesture3 = UITapGestureRecognizer(target: self, action: "button3Tap")
@@ -77,23 +59,13 @@ class FirstViewController: UIViewController {
         self.button4.addGestureRecognizer(gesture4)
         self.button5.addGestureRecognizer(gesture5)
         
-
-        
-        
         gifImageViewFirstPage.animationImages = [UIImage]()
         
+        loadHeaderGif()
         
-        
-    for var index = 0; index < 60; index++ {
-            let frameName = String(format: "Comp 1_%05d", index)
-            gifImageViewFirstPage.animationImages?.append(UIImage(named: frameName)!)
-            gifImageViewFirstPage.animationDuration = 2
-            gifImageViewFirstPage.startAnimating()
- 
-            
-        }
+        self.season = "cats"
 
-        var query = PFQuery(className:"Season")
+        let query = PFQuery(className:"Season")
         query.getObjectInBackgroundWithId("FM2qfTOgGM") {
             (parseSeason: PFObject?, error: NSError?) -> Void in
             if error == nil && parseSeason != nil {
@@ -102,11 +74,12 @@ class FirstViewController: UIViewController {
                 print(self.season)
             } else {
                 print(error)
+                self.season = "cats"
             }
         }
         
         if self.season == "cats" {
-            seasonImage.image = UIImage(named: "catsbutton1")
+            seasonImage.image = UIImage(named: "catsbuttonstor2")
         }
         
         /*
@@ -137,6 +110,67 @@ class FirstViewController: UIViewController {
 
     override func canBecomeFirstResponder() -> Bool {
         return true
+    }
+    
+    func loadHeaderGif() {
+        randomGif = arc4random_uniform(7)
+        
+        if randomGif == 0{
+            self.randomId = "eXK5SYAr8BPhu"
+        }else if randomGif == 1 {
+            self.randomId = "yGE50nEVxqjFC"
+        }else if randomGif == 2 {
+            self.randomId = "26tPghhb310muUkEw"
+        }else if randomGif == 3 {
+            self.randomId = "xHlEA4pIxaGZi"
+        }else if randomGif == 4 {
+            self.randomId = "102mqDgAb4Kfug"
+        }else if randomGif == 5 {
+            self.randomId = "WoYwgrfZP4yw8"
+        }else if randomGif == 6 {
+            self.randomId = "rDE9JAGSfRkzK"
+        }else if randomGif == 7 {
+            self.randomId = "dASc6rD8EOXEQ"
+        }
+        
+        g.gif(self.randomId) { gif, err in
+            
+            if(err == nil) {
+                let json = JSON((gif?.json)!)
+                let urlString = "http://media4.giphy.com/media/" + self.randomId + "/giphy.gif"
+                let url: NSURL = NSURL(string: urlString)!
+                print(url)
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.gifImageViewFirstPage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                    self.gifImageViewFirstPage.startAnimating()
+                })
+            } else {
+                print("NO INTERNET")
+                self.loadOfflineGif()
+            }
+            
+        }
+        
+    }
+    
+    func loadOfflineGif() {
+        var imageList = [UIImage]()
+        for var i = 0; i < 99; i++ {
+            if(i < 10) {
+                let frameName = String(format: "NoInternet00%d", i)
+                imageList.append(UIImage(named: frameName)!)
+            } else {
+                let frameName = String(format: "NoInternet0%d", i)
+                imageList.append(UIImage(named: frameName)!)
+            }
+        }
+        self.gifImageViewFirstPage.animationImages = imageList
+        self.gifImageViewFirstPage.startAnimating()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        loadHeaderGif()
     }
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
@@ -256,7 +290,7 @@ class FirstViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var destinationVC = segue.destinationViewController as! ViewController
+        let destinationVC = segue.destinationViewController as! ViewController
         destinationVC.searchTag = self.searchTag
         destinationVC.bgColor = self.bgColor
         

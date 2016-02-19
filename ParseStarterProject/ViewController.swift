@@ -14,6 +14,7 @@ import SpriteKit
 import QuartzCore
 
 class ViewController: UIViewController {
+    @IBOutlet weak var noInternetLabel: UILabel!
     
     @IBOutlet weak var swipeImageView: UIImageView!
     
@@ -116,8 +117,6 @@ class ViewController: UIViewController {
             }
             loadingImageView.animationDuration = 1
             
-            
-            
         }
 
         
@@ -198,39 +197,71 @@ class ViewController: UIViewController {
         self.gifImage.hidden = true
         var random = arc4random_uniform(UInt32(searchTag.count))
         g.random(searchTag[Int(random)], rating: nil) { gif, err in
-            let json = JSON((gif?.json)!)
-            let urlString = json["image_original_url"].string
-            self.globalGifURL = urlString!
-            let url: NSURL = NSURL(string: urlString!)!
-            dispatch_async(dispatch_get_main_queue(), {
-                self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-                self.gifImage.startAnimating()
-                //self.loadingImageView.hidden = true
-                self.loadingImageView.stopAnimating()
-                self.gifImage.hidden = false
-                self.gifId = (gif?.id)!
-                print("GifID: \(self.gifId)")
-                self.getGifInfo()
-            })
+            if(err == nil) {
+                self.noInternetLabel.hidden = true
+                let json = JSON((gif?.json)!)
+                let urlString = json["image_original_url"].string
+                self.globalGifURL = urlString!
+                let url: NSURL = NSURL(string: urlString!)!
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                    self.gifImage.startAnimating()
+                    //self.loadingImageView.hidden = true
+                    self.loadingImageView.stopAnimating()
+                    self.gifImage.hidden = false
+                    self.gifId = (gif?.id)!
+                    print("GifID: \(self.gifId)")
+                    self.getGifInfo()
+                })
+            } else {
+                self.loadOfflineGif()
+            }
         }
     }
     
     
     func randomGif() {
-        var random = arc4random_uniform(UInt32(searchTag.count))
-        g.random(searchTag[Int(random)], rating: nil) { gif, err in
-            let json = JSON((gif?.json)!)
-            let urlString = json["image_original_url"].string
-            self.globalGifURL = urlString!
-            let url: NSURL = NSURL(string: urlString!)!
-            dispatch_async(dispatch_get_main_queue(), {
-                self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-                self.gifImage.startAnimating()
-                self.gifId = (gif?.id)!
-                print("GifID: \(self.gifId)")
-                self.getGifInfo()
-            })
+        if(searchTag.count < 1) {
+            searchTag.append("oops")
         }
+        
+        var random = arc4random_uniform(UInt32(searchTag.count))
+        
+        g.random(searchTag[Int(random)], rating: nil) { gif, err in
+            if(err == nil) {
+                self.noInternetLabel.hidden = true
+                let json = JSON((gif?.json)!)
+                let urlString = json["image_original_url"].string
+                print(urlString)
+                self.globalGifURL = urlString!
+                let url: NSURL = NSURL(string: urlString!)!
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                    self.gifImage.startAnimating()
+                    self.gifId = (gif?.id)!
+                    self.getGifInfo()
+                })
+            } else {
+                self.loadOfflineGif()
+            }
+            
+        }
+    }
+    
+    func loadOfflineGif() {
+        self.noInternetLabel.hidden = false
+        var imageList = [UIImage]()
+        for var i = 0; i < 99; i++ {
+            if(i < 10) {
+                let frameName = String(format: "NoInternet00%d", i)
+                imageList.append(UIImage(named: frameName)!)
+            } else {
+                let frameName = String(format: "NoInternet0%d", i)
+                imageList.append(UIImage(named: frameName)!)
+            }
+        }
+        self.gifImage.animationImages = imageList
+        self.gifImage.startAnimating()
     }
     
 
@@ -432,20 +463,24 @@ class ViewController: UIViewController {
         self.gifImage.hidden = true
         var random = arc4random_uniform(UInt32(searchTag.count))
         g.random(searchTag[Int(random)], rating: nil) { gif, err in
-            let json = JSON((gif?.json)!)
-            let urlString = json["image_original_url"].string
-            self.globalGifURL = urlString!
-            let url: NSURL = NSURL(string: urlString!)!
-            dispatch_async(dispatch_get_main_queue(), {
-                self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-                self.gifImage.startAnimating()
-                //self.loadingImageView.hidden = true
-                self.loadingImageView.stopAnimating()
-                self.gifImage.hidden = false
-                self.gifId = (gif?.id)!
-                print("GifID: \(self.gifId)")
-                self.getGifInfo()
-            })
+            if(err == nil) {
+                let json = JSON((gif?.json)!)
+                let urlString = json["image_original_url"].string
+                self.globalGifURL = urlString!
+                let url: NSURL = NSURL(string: urlString!)!
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                    self.gifImage.startAnimating()
+                    //self.loadingImageView.hidden = true
+                    self.loadingImageView.stopAnimating()
+                    self.gifImage.hidden = false
+                    self.gifId = (gif?.id)!
+                    print("GifID: \(self.gifId)")
+                    self.getGifInfo()
+                })
+            } else {
+                
+            }
         }
     }
 }
