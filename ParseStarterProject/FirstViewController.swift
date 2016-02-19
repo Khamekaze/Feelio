@@ -194,6 +194,7 @@ class FirstViewController: UIViewController {
     func button1Tap(){
         print("button Special pressed")
         if(season == "cats") {
+            self.searchTag = [String]()
             searchTag.append("cats")
             searchTag.append("cat")
             searchTag.append("kitten")
@@ -211,6 +212,7 @@ class FirstViewController: UIViewController {
     }
     func button4Tap(){
          print("button Happy pressed")
+        self.searchTag = [String]()
         searchTag.append("happy")
         searchTag.append("glad")
         searchTag.append("joy")
@@ -220,6 +222,7 @@ class FirstViewController: UIViewController {
     }
     func button3Tap(){
          print("button Romantic pressed")
+        self.searchTag = [String]()
         searchTag.append("romantic")
         searchTag.append("love")
         bgColor = "purple"
@@ -228,15 +231,18 @@ class FirstViewController: UIViewController {
     }
     func button2Tap(){
          print("button Pumped pressed")
+        self.searchTag = [String]()
         searchTag.append("pumped")
-        searchTag.append("excited")
-        searchTag.append("fight")
+        searchTag.append("strength")
+        searchTag.append("workout")
+        searchTag.append("strength")
         bgColor = "blue"
         performSegueWithIdentifier("secondViewController", sender: self)
         //stopTimers()
     }
     func button5Tap(){
          print("button Rage pressed")
+        self.searchTag = [String]()
         searchTag.append("rage")
         searchTag.append("frustrated")
         searchTag.append("stressed")

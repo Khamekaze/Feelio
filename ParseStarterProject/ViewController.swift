@@ -105,13 +105,13 @@ class ViewController: UIViewController {
         
         loadingImageView.animationImages = [UIImage]()
         
-        for var index = 1; index < 23; index++ {
+        for var index = 0; index < 20; index++ {
             
             if(index < 10) {
-                let frameName = String(format: "Loadingscreendots_0000%d", index)
+                let frameName = String(format: "Feelitbro_0000%d", index)
                 loadingImageView.animationImages?.append(UIImage(named: frameName)!)
             } else {
-                let frameName = String(format: "Loadingscreendots_000%d", index)
+                let frameName = String(format: "Feelitbro_000%d", index)
                 loadingImageView.animationImages?.append(UIImage(named: frameName)!)
             }
             loadingImageView.animationDuration = 1
