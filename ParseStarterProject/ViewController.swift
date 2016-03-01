@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var likeBackgroundView: UIView!
     
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var shareBackgroundView: UIView!
     
     @IBOutlet weak var textImageView: UIImageView!
@@ -41,6 +42,9 @@ class ViewController: UIViewController {
     var globalGifURL = String()
     var bgColor = String()
     
+    var clicked = Bool()
+    var swiped = Bool()
+    
     @IBOutlet weak var dislikeButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
 
@@ -55,11 +59,13 @@ class ViewController: UIViewController {
         self.makeCircleView(self.swipeButtonUIView)
         self.makeCircleView(self.likeBackgroundView)
         self.makeCircleView(self.shareBackgroundView)
+        self.addBorderToImageView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        clicked = false
+        swiped = false
         /*
         swipeButtonUIView.layer.cornerRadius = swipeButtonUIView.bounds.size.width/2
         swipeButtonUIView.clipsToBounds = true
@@ -118,6 +124,8 @@ class ViewController: UIViewController {
             loadingImageView.animationDuration = 1
             
         }
+        
+        loadingImageView.startAnimating()
 
         
         
@@ -127,13 +135,10 @@ class ViewController: UIViewController {
         PFAnonymousUtils.logInWithBlock {
             (user: PFUser?, error: NSError?) -> Void in
             if error != nil || user == nil {
-                print("Anonymous login failed.")
             } else {
-                print("Anonymous user logged in with username \(user?.username)")
             }
         }
         }else{
-            print("user alredy logged in with username \(PFUser.currentUser()?.username)")
         }
         
         print(bgColor)
@@ -178,6 +183,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func addBorderToImageView() {
+        let topBorder = CALayer()
+        topBorder.frame = CGRectMake(0.0, 0.0, self.gifImage.frame.size.width, 1.0)
+        topBorder.backgroundColor = UIColor.whiteColor().CGColor
+        let bottomBorder = CALayer()
+        bottomBorder.frame = CGRectMake(0.0, 0.0, self.buttonView.frame.size.width, 1.0)
+        bottomBorder.backgroundColor = UIColor.whiteColor().CGColor
+        gifImage.layer.addSublayer(topBorder)
+        buttonView.layer.addSublayer(bottomBorder)
+    }
+    
     func makeCircleView(view: UIView) {
         let size: CGFloat = min(view.frame.height, view.frame.width)
         let center: CGPoint = view.center
@@ -193,30 +209,34 @@ class ViewController: UIViewController {
 
     @IBAction func randomGifSwipe(sender: AnyObject) {
         //self.loadingImageView.hidden = false
-        self.loadingImageView.startAnimating()
-        self.gifImage.hidden = true
-        var random = arc4random_uniform(UInt32(searchTag.count))
-        g.random(searchTag[Int(random)], rating: nil) { gif, err in
-            if(err == nil) {
-                self.noInternetLabel.hidden = true
-                let json = JSON((gif?.json)!)
-                let urlString = json["image_original_url"].string
-                self.globalGifURL = urlString!
-                let url: NSURL = NSURL(string: urlString!)!
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-                    self.gifImage.startAnimating()
-                    //self.loadingImageView.hidden = true
-                    self.loadingImageView.stopAnimating()
-                    self.gifImage.hidden = false
-                    self.gifId = (gif?.id)!
-                    print("GifID: \(self.gifId)")
-                    self.getGifInfo()
-                })
-            } else {
-                self.loadOfflineGif()
+        if(!swiped) {
+            swiped = true
+            self.loadingImageView.startAnimating()
+            self.gifImage.hidden = true
+            var random = arc4random_uniform(UInt32(searchTag.count))
+            g.random(searchTag[Int(random)], rating: nil) { gif, err in
+                if(err == nil) {
+                    self.noInternetLabel.hidden = true
+                    let json = JSON((gif?.json)!)
+                    let urlString = json["image_original_url"].string
+                    self.globalGifURL = urlString!
+                    let url: NSURL = NSURL(string: urlString!)!
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                        self.gifImage.startAnimating()
+                        //self.loadingImageView.hidden = true
+                        self.loadingImageView.stopAnimating()
+                        self.gifImage.hidden = false
+                        self.gifId = (gif?.id)!
+                        self.getGifInfo()
+                        self.swiped = false
+                    })
+                } else {
+                    self.loadOfflineGif()
+                }
             }
         }
+        
     }
     
     
@@ -226,26 +246,26 @@ class ViewController: UIViewController {
         }
         
         var random = arc4random_uniform(UInt32(searchTag.count))
-        
-        g.random(searchTag[Int(random)], rating: nil) { gif, err in
-            if(err == nil) {
-                self.noInternetLabel.hidden = true
-                let json = JSON((gif?.json)!)
-                let urlString = json["image_original_url"].string
-                print(urlString)
-                self.globalGifURL = urlString!
-                let url: NSURL = NSURL(string: urlString!)!
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-                    self.gifImage.startAnimating()
-                    self.gifId = (gif?.id)!
-                    self.getGifInfo()
-                })
-            } else {
-                self.loadOfflineGif()
+            g.random(searchTag[Int(random)], rating: nil) { gif, err in
+                if(err == nil) {
+                    self.noInternetLabel.hidden = true
+                    let json = JSON((gif?.json)!)
+                    let urlString = json["image_original_url"].string
+                    self.globalGifURL = urlString!
+                    let url: NSURL = NSURL(string: urlString!)!
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                        self.gifImage.startAnimating()
+                        self.gifId = (gif?.id)!
+                        self.getGifInfo()
+                        self.loadingImageView.stopAnimating()
+                    })
+                } else {
+                    self.loadOfflineGif()
+                }
+                
             }
-            
-        }
+        
     }
     
     func loadOfflineGif() {
@@ -283,25 +303,20 @@ class ViewController: UIViewController {
                     for object in objects {
                         self.gifLikes = object["likes"] as! Int
                         self.gifObjectId = object.objectId!
-                        print("GIF objectID:\(self.gifObjectId)")
-                        print("GIF had \(self.gifLikes) before")
                     }
                 }
             } else {
-                print("Error: \(error!) \(error!.userInfo)")
             }
             
             var query2 = PFQuery(className:"Gifs")
             query2.getObjectInBackgroundWithId(self.gifObjectId) {
                 (gifInfo: PFObject?, error: NSError?) -> Void in
                 if error != nil {
-                    print(error)
                 } else if let gifInfo = gifInfo {
                     
                     gifInfo.addObject(user!.username!, forKey: "likedByUsers")
                     gifInfo["likes"] = self.gifLikes + 1
                     gifInfo.saveInBackground()
-                    print("Gif Liked")
                     self.gifLikes = self.gifLikes + 1
 
                     self.likeButton.hidden = true
@@ -321,30 +336,24 @@ class ViewController: UIViewController {
             (objects: [PFObject]?, error: NSError?) -> Void in
             
             if error == nil {
-                print("Successfully retrieved \(objects!.count) Gifs")
                 if let objects = objects {
                     for object in objects {
                         self.gifLikes = object["likes"] as! Int
                         self.gifObjectId = object.objectId!
-                        print("GIF objectID:\(self.gifObjectId)")
-                        print("GIF had \(self.gifLikes) before")
                     }
                 }
             } else {
-                print("Error: \(error!) \(error!.userInfo)")
             }
             
             var query2 = PFQuery(className:"Gifs")
             query2.getObjectInBackgroundWithId(self.gifObjectId) {
                 (gifInfo: PFObject?, error: NSError?) -> Void in
                 if error != nil {
-                    print(error)
                 } else if let gifInfo = gifInfo {
                     
                     gifInfo.removeObject((user?.username)!, forKey: "likedByUsers")
                     gifInfo["likes"] = self.gifLikes - 1
                     gifInfo.saveInBackground()
-                    print("Gif Disliked")
                     self.gifLikes = self.gifLikes - 1
 
                     self.likeButton.hidden = false
@@ -389,17 +398,12 @@ class ViewController: UIViewController {
                                     self.gifObjectId = object.objectId!
                                     self.gifLikes = object["likes"] as! Int
                                     self.gifUsers = object["likedByUsers"] as! [String]
-
-                                    print("liked by users \(self.gifUsers)")
-                                    print("Likes: \(self.gifLikes)")
                                     let userContains = self.gifUsers.contains((user?.username)!)
                                     if (userContains == true)
                                     {
-                                        print("this user has alredy liked this GIF")
                                         self.likeButton.hidden = true
                                         self.dislikeButton.hidden = false
                                     }else{
-                                        print("this user has NOT liked this GIF")
                                         self.likeButton.hidden = false
                                         self.dislikeButton.hidden = true
                                     }
@@ -408,7 +412,6 @@ class ViewController: UIViewController {
                             }
                         } else {
                             // Log details of the failure
-                            print("Error: \(error!) \(error!.userInfo)")
                         }
                     }
                 }else{
@@ -423,8 +426,6 @@ class ViewController: UIViewController {
                     createGif.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError?) -> Void in
                         if (success) {
-                            print("GifCreated")
-                            print("this user has NOT liked this GIF")
                             self.gifLikes = 0
 
                             self.likeButton.hidden = false
@@ -440,47 +441,54 @@ class ViewController: UIViewController {
     
     @IBAction func shareButton(sender: AnyObject) {
         
-        //let shareText = "Feelio"
+        let shareText = "Feelio"
         
         let shareWebsite = NSURL(string: globalGifURL)
-        let shareObject = [shareWebsite!]
+        let shareObject = [shareWebsite!, shareText]
         let activityVC = UIActivityViewController(activityItems: shareObject, applicationActivities: nil)
         
         activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
-        print(globalGifURL)
         self.presentViewController(activityVC, animated: true, completion: nil)
         
     }
     
     @IBAction func backButton(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        if(!clicked) {
+            self.navigationController?.popViewControllerAnimated(true)
+            clicked = true
+        }
+        
     }
 
     @IBAction func swipeButtonACTION(sender: AnyObject) {
         
-        //self.loadingImageView.hidden = false
-        self.loadingImageView.startAnimating()
-        self.gifImage.hidden = true
-        var random = arc4random_uniform(UInt32(searchTag.count))
-        g.random(searchTag[Int(random)], rating: nil) { gif, err in
-            if(err == nil) {
-                let json = JSON((gif?.json)!)
-                let urlString = json["image_original_url"].string
-                self.globalGifURL = urlString!
-                let url: NSURL = NSURL(string: urlString!)!
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
-                    self.gifImage.startAnimating()
-                    //self.loadingImageView.hidden = true
-                    self.loadingImageView.stopAnimating()
-                    self.gifImage.hidden = false
-                    self.gifId = (gif?.id)!
-                    print("GifID: \(self.gifId)")
-                    self.getGifInfo()
-                })
-            } else {
-                
+        if(!swiped) {
+            swiped = true
+            //self.loadingImageView.hidden = false
+            self.loadingImageView.startAnimating()
+            self.gifImage.hidden = true
+            let random = arc4random_uniform(UInt32(searchTag.count))
+            g.random(searchTag[Int(random)], rating: nil) { gif, err in
+                if(err == nil) {
+                    let json = JSON((gif?.json)!)
+                    let urlString = json["image_original_url"].string
+                    self.globalGifURL = urlString!
+                    let url: NSURL = NSURL(string: urlString!)!
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.gifImage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
+                        self.gifImage.startAnimating()
+                        //self.loadingImageView.hidden = true
+                        self.loadingImageView.stopAnimating()
+                        self.gifImage.hidden = false
+                        self.gifId = (gif?.id)!
+                        self.getGifInfo()
+                        self.swiped = false
+                    })
+                } else {
+                    
+                }
             }
         }
+        
     }
 }

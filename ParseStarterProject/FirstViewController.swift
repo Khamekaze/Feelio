@@ -13,6 +13,7 @@ import ImageIO
 class FirstViewController: UIViewController {
     @IBOutlet weak var gifImageViewFirstPage: UIImageView!
     
+    @IBOutlet weak var noInternetLabel: UILabel!
     
     @IBOutlet weak var shakeImage2: UIImageView!
 
@@ -23,6 +24,7 @@ class FirstViewController: UIViewController {
     var randomGif = UInt32()
     var randomId = String()
     var p2CategoryButton = String()
+    var clicked = Bool()
 
     @IBOutlet weak var seasonImage: UIImageView!
     
@@ -61,7 +63,7 @@ class FirstViewController: UIViewController {
         
         gifImageViewFirstPage.animationImages = [UIImage]()
         
-        loadHeaderGif()
+        //loadHeaderGif()
         
         self.season = "cats"
 
@@ -71,7 +73,6 @@ class FirstViewController: UIViewController {
             if error == nil && parseSeason != nil {
                 
                 self.season = parseSeason!["season"] as! String
-                print(self.season)
             } else {
                 print(error)
                 self.season = "cats"
@@ -133,6 +134,8 @@ class FirstViewController: UIViewController {
             self.randomId = "dASc6rD8EOXEQ"
         }
         
+        print("Random Gif" + String(randomGif))
+        
         g.gif(self.randomId) { gif, err in
             
             if(err == nil) {
@@ -143,10 +146,15 @@ class FirstViewController: UIViewController {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.gifImageViewFirstPage.image = UIImage.animatedImageWithAnimatedGIFURL(url)
                     self.gifImageViewFirstPage.startAnimating()
+                    self.noInternetLabel.hidden = true
                 })
             } else {
-                print("NO INTERNET")
-                self.loadOfflineGif()
+                dispatch_async(dispatch_get_main_queue(), {
+                    print("NO INTERNET")
+                    self.gifImageViewFirstPage.stopAnimating()
+                    self.noInternetLabel.hidden = false
+                    self.loadOfflineGif()
+                })
             }
             
         }
@@ -164,13 +172,15 @@ class FirstViewController: UIViewController {
                 imageList.append(UIImage(named: frameName)!)
             }
         }
-        self.gifImageViewFirstPage.animationImages = imageList
+        self.gifImageViewFirstPage.image = UIImage.animatedImageWithImages(imageList, duration: 3.0)
+        //self.gifImageViewFirstPage.animationImages = imageList
         self.gifImageViewFirstPage.startAnimating()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         loadHeaderGif()
+        clicked = false
     }
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
@@ -226,65 +236,90 @@ class FirstViewController: UIViewController {
     */
 
     func button1Tap(){
-        print("button Special pressed")
-        if(season == "cats") {
-            self.searchTag = [String]()
-            searchTag.append("cats")
-            searchTag.append("cat")
-            searchTag.append("kitten")
-            searchTag.append("kittens")
-            bgColor = "yellow"
-        } else if(season == "christmas") {
-            //
-        } else if(season == "easter") {
-            //
-        } else if(season == "valentines") {
-            //
+        if(!clicked) {
+            clicked = true
+            self.gifImageViewFirstPage.stopAnimating()
+            print("button Special pressed")
+            if(season == "cats") {
+                self.searchTag = [String]()
+                searchTag.append("cats")
+                searchTag.append("cat")
+                searchTag.append("kitten")
+                searchTag.append("kittens")
+                bgColor = "yellow"
+            } else if(season == "christmas") {
+                //
+            } else if(season == "easter") {
+                //
+            } else if(season == "valentines") {
+                //
+            }
+            performSegueWithIdentifier("secondViewController", sender: self)
+            //stopTimers()
         }
-        performSegueWithIdentifier("secondViewController", sender: self)
-        //stopTimers()
+        
     }
     func button4Tap(){
-         print("button Happy pressed")
-        self.searchTag = [String]()
-        searchTag.append("happy")
-        searchTag.append("glad")
-        searchTag.append("joy")
-        bgColor = "green"
-        performSegueWithIdentifier("secondViewController", sender: self)
-        //stopTimers()
+        if(!clicked) {
+            clicked = true
+            self.gifImageViewFirstPage.stopAnimating()
+            print("button Happy pressed")
+            self.searchTag = [String]()
+            searchTag.append("happy")
+            searchTag.append("glad")
+            searchTag.append("joy")
+            bgColor = "green"
+            performSegueWithIdentifier("secondViewController", sender: self)
+            //stopTimers()
+        }
+        
     }
     func button3Tap(){
-         print("button Romantic pressed")
-        self.searchTag = [String]()
-        searchTag.append("romantic")
-        searchTag.append("love")
-        bgColor = "purple"
-        performSegueWithIdentifier("secondViewController", sender: self)
-        //stopTimers()
+        if(!clicked) {
+            clicked = true
+            self.gifImageViewFirstPage.stopAnimating()
+            print("button Romantic pressed")
+            self.searchTag = [String]()
+            searchTag.append("romantic")
+            searchTag.append("love")
+            bgColor = "purple"
+            performSegueWithIdentifier("secondViewController", sender: self)
+            //stopTimers()
+        }
+        
     }
     func button2Tap(){
-         print("button Pumped pressed")
-        self.searchTag = [String]()
-        searchTag.append("pumped")
-        searchTag.append("strength")
-        searchTag.append("workout")
-        searchTag.append("strength")
-        bgColor = "blue"
-        performSegueWithIdentifier("secondViewController", sender: self)
-        //stopTimers()
+        if(!clicked) {
+            clicked = true
+            self.gifImageViewFirstPage.stopAnimating()
+            print("button Pumped pressed")
+            self.searchTag = [String]()
+            searchTag.append("pumped")
+            searchTag.append("strength")
+            searchTag.append("workout")
+            searchTag.append("strength")
+            bgColor = "blue"
+            performSegueWithIdentifier("secondViewController", sender: self)
+            //stopTimers()
+        }
+        
     }
     func button5Tap(){
-         print("button Rage pressed")
-        self.searchTag = [String]()
-        searchTag.append("rage")
-        searchTag.append("frustrated")
-        searchTag.append("stressed")
-        searchTag.append("mad")
-        searchTag.append("angry")
-        bgColor = "orange"
-        performSegueWithIdentifier("secondViewController", sender: self)
-        //stopTimers()
+        if(!clicked) {
+            clicked = true
+            self.gifImageViewFirstPage.stopAnimating()
+            print("button Rage pressed")
+            self.searchTag = [String]()
+            searchTag.append("rage")
+            searchTag.append("frustrated")
+            searchTag.append("stressed")
+            searchTag.append("mad")
+            searchTag.append("angry")
+            bgColor = "orange"
+            performSegueWithIdentifier("secondViewController", sender: self)
+            //stopTimers()
+        }
+        
     }
     
     
