@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textImageView: UIImageView!
     
+
     
     var gifId = String()
     var gifLikes = Int()
@@ -109,6 +110,27 @@ class ViewController: UIViewController {
         
         //self.swipeImageView.image = swipeImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         //self.swipeImageView.tintColor = UIColor.orangeColor()
+        
+        swipeImageView.animationImages = [UIImage]()
+        
+        for var index = 0; index < 47; index++ {
+            
+            if(index < 10) {
+                let frameName = String(format: "Swipe_0000%d", index)
+                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
+            } else {
+                let frameName = String(format: "Swipe_000%d", index)
+                swipeImageView.animationImages?.append(UIImage(named: frameName)!)
+            }
+            swipeImageView.animationDuration = 1.5
+            swipeImageView.startAnimating()
+            
+        }
+
+        
+        
+        
+        
         
         loadingImageView.animationImages = [UIImage]()
         

@@ -140,7 +140,7 @@
                                     <constraint firstAttribute="width" constant="252" id="txW-9p-Jmp"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Internet Connection Available, Connect To A Network To Load GIFS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNI-I3-mF5">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NOOOOO...NO INTERNET :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNI-I3-mF5">
                                 <rect key="frame" x="0.0" y="63" width="375" height="67"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -318,7 +318,7 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoweredBy_200px-White_HorizText.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAU-ob-rai">
-                                        <rect key="frame" x="0.0" y="77" width="112" height="13"/>
+                                        <rect key="frame" x="0.0" y="70" width="112" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GAU-ob-rai" secondAttribute="height" multiplier="94:11" id="FIS-HE-Ptz"/>
                                         </constraints>
@@ -360,13 +360,20 @@
                                             <constraint firstAttribute="height" constant="140" id="pD4-vH-xaB"/>
                                         </constraints>
                                     </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Internet Connection Available, Connect To A Network To Load GIFS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="312-eM-tn6">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NOOOOO...NO INTERNET :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="312-eM-tn6">
                                         <rect key="frame" x="0.0" y="90" width="320" height="67"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swipe_00000.png" translatesAutoresizingMaskIntoConstraints="NO" id="asm-p2-dD6">
+                                        <rect key="frame" x="188" y="58" width="130" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aFY-mo-ME2"/>
+                                            <constraint firstAttribute="width" constant="130" id="nim-T7-5tZ"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -374,6 +381,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Heg-GV-nz4" secondAttribute="trailing" id="32b-6e-Fpf"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="bEh-oJ-pRs" secondAttribute="bottom" id="5Ug-HX-5Ni"/>
                                     <constraint firstItem="312-eM-tn6" firstAttribute="top" secondItem="GAU-ob-rai" secondAttribute="bottom" id="61y-bY-zhs"/>
+                                    <constraint firstItem="asm-p2-dD6" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="top" id="6k2-cs-Kv2"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="top" secondItem="Heg-GV-nz4" secondAttribute="bottom" constant="15" id="7qX-M7-hIg"/>
                                     <constraint firstItem="I0W-3g-qOq" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="top" id="81T-ie-HSL"/>
                                     <constraint firstItem="RNN-wr-lQR" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="92g-eb-tyt"/>
@@ -385,7 +393,9 @@
                                     <constraint firstAttribute="trailing" secondItem="qHI-BK-WbO" secondAttribute="trailing" id="Hel-6l-J9z"/>
                                     <constraint firstItem="Ays-aI-i4C" firstAttribute="centerX" secondItem="RNN-wr-lQR" secondAttribute="centerX" id="Iq8-oA-peJ"/>
                                     <constraint firstItem="sDL-P9-vpI" firstAttribute="width" secondItem="qHI-BK-WbO" secondAttribute="width" multiplier="0.2" id="JqU-B5-jvH"/>
+                                    <constraint firstAttribute="trailing" secondItem="asm-p2-dD6" secondAttribute="trailing" constant="2" id="LCI-F8-cTg"/>
                                     <constraint firstItem="bEh-oJ-pRs" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="24" id="Lbk-Cy-tiL"/>
+                                    <constraint firstItem="asm-p2-dD6" firstAttribute="centerY" secondItem="RNN-wr-lQR" secondAttribute="top" multiplier="1.3" id="NnG-KB-t1o"/>
                                     <constraint firstItem="I0W-3g-qOq" firstAttribute="centerX" secondItem="qHI-BK-WbO" secondAttribute="centerX" multiplier="1.7" id="Nyf-hX-Rcb"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="height" secondItem="RNN-wr-lQR" secondAttribute="height" multiplier="0.09" id="PED-4M-Uke"/>
                                     <constraint firstItem="312-eM-tn6" firstAttribute="leading" secondItem="Gvt-tf-aTe" secondAttribute="leading" id="PwP-xt-eAx"/>
@@ -393,7 +403,7 @@
                                     <constraint firstItem="scl-zz-WB6" firstAttribute="width" secondItem="qHI-BK-WbO" secondAttribute="width" multiplier="0.3" id="Rtj-4Q-JFT"/>
                                     <constraint firstItem="sDL-P9-vpI" firstAttribute="centerY" secondItem="qHI-BK-WbO" secondAttribute="top" id="Sf3-qS-DSd"/>
                                     <constraint firstItem="sDL-P9-vpI" firstAttribute="centerX" secondItem="qHI-BK-WbO" secondAttribute="centerX" multiplier="0.3" id="UmA-Ft-diU"/>
-                                    <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="top" multiplier="1.2" id="XLx-6O-J8j"/>
+                                    <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="RNN-wr-lQR" secondAttribute="top" multiplier="1.1" id="XLx-6O-J8j"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="top" secondItem="Gvt-tf-aTe" secondAttribute="top" constant="110" id="YId-7F-KvC"/>
                                     <constraint firstAttribute="bottom" secondItem="qHI-BK-WbO" secondAttribute="bottom" id="ZL5-bY-raq"/>
                                     <constraint firstItem="GAU-ob-rai" firstAttribute="bottom" secondItem="RNN-wr-lQR" secondAttribute="bottom" id="b6G-GB-QMg"/>
@@ -435,6 +445,7 @@
                                         <exclude reference="pG7-re-Loh"/>
                                         <exclude reference="qMe-AS-Uka"/>
                                         <exclude reference="ueG-cx-3Or"/>
+                                        <exclude reference="6k2-cs-Kv2"/>
                                         <exclude reference="EYC-LY-SOU"/>
                                     </mask>
                                 </variation>
@@ -464,7 +475,8 @@
                         <outlet property="shareBackgroundView" destination="I0W-3g-qOq" id="Sch-Ac-c4F"/>
                         <outlet property="swipeButtonOUTLET" destination="iMO-HO-6uP" id="wr9-5q-npA"/>
                         <outlet property="swipeButtonUIView" destination="scl-zz-WB6" id="FyQ-gD-rut"/>
-                        <outlet property="textImageView" destination="PSv-Qr-JkF" id="3wx-UB-KZq"/>
+                        <outlet property="swipeImageView" destination="asm-p2-dD6" id="HUh-2L-jLB"/>
+                        <outlet property="textImageView" destination="PSv-Qr-JkF" id="t2f-pH-XId"/>
                         <segue destination="s5z-K7-e7x" kind="show" identifier="firstViewController" id="Xuy-qk-WMC"/>
                     </connections>
                 </viewController>
@@ -475,7 +487,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="885.5" y="338.5"/>
+            <point key="canvasLocation" x="885" y="338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f5p-48-y7z">
@@ -498,6 +510,7 @@
     </scenes>
     <resources>
         <image name="PoweredBy_200px-White_HorizText.png" width="200" height="22"/>
+        <image name="Swipe_00000.png" width="680" height="269"/>
         <image name="affectionatedbutton1.png" width="771" height="617"/>
         <image name="backbackback-01.png" width="217" height="217"/>
         <image name="catsbuttonstor2.png" width="1567" height="558"/>
